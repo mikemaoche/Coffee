@@ -1,5 +1,17 @@
+body{
+  background:rgb(10, 21, 31) !important;
+}
+
 .App {
   text-align: center;
+  margin:1rem auto;
+  padding:1rem;
+  border-radius: 8px;
+  width: 80%;
+  background-image: url("../src/images/coffee-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
 }
 
 .App-logo {
@@ -35,4 +47,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.footer{
+  color:white;
+  background: rgba(0, 0, 0,0.3);
+  border:2px solid rgba(236, 240, 241,1.0);
+  border-radius: 4px;
+  position: relative;
+  bottom: 0;
+  margin: 5em 0em 0em;
+  padding: 5em 0em; 
+}
+
+
+
+.menuHeader{
+  background: rgba(0, 0, 0, 0.3) !important;
+  border:2px solid rgba(236, 240, 241,1.0) !important;
+}
+
+.personalContainer{
+  background: rgba(255, 255, 255, 0.2) !important;
 }
