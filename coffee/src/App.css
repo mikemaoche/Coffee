@@ -5,7 +5,7 @@ body{
 .App {
   text-align: center;
   margin:1rem auto;
-  padding:1rem;
+  padding:0rem;
   border-radius: 8px;
   width: 80%;
   background-image: url("../src/images/coffee-bg.jpg");
@@ -58,7 +58,6 @@ body{
   border-radius: 4px;
   position: relative;
   bottom: 0;
-  margin: 5em 0em 0em;
   padding: 5em 0em; 
 }
 
@@ -66,9 +65,10 @@ body{
 
 .menuHeader{
   background: rgba(0, 0, 0, 0.3) !important;
-  border:2px solid rgba(236, 240, 241,1.0) !important;
+  border:1px solid rgba(236, 240, 241,1.0) !important;
 }
 
 .personalContainer{
   background: rgba(255, 255, 255, 0.2) !important;
+  text-align: left;
 }

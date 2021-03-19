@@ -37,7 +37,7 @@ export default class App extends Component{
     return (
       <div className='App'>
           <Header pageName={'profile'} handleIndex={this.handleIndex} />
-          <Container style={{ marginTop: '1rem', width:'98%' }}>
+          <Container style={{ width:'100%' }}>
             {this.renderPage()}
           </Container>
           <Footer></Footer>
