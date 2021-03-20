@@ -3,8 +3,8 @@ import 'semantic-ui-css/semantic.min.css'
 import React, { Component } from 'react'
 import Header from './components/Header'
 import Home from './pages/Home';
- import Contact from './pages/Contact';
-// import Skills from './pages/Skills';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
 import Footer from './components/Footer'
 import {Container} from 'semantic-ui-react'
 
@@ -16,7 +16,8 @@ export default class App extends Component{
       pageName:'Home',
       components:{
         'Home':Home,
-        'Contact':Contact
+        'Contact':Contact,
+        'Projects': Projects
       }
     }
     this.handleIndex=this.handleIndex.bind(this)
@@ -28,7 +29,6 @@ export default class App extends Component{
 
   renderPage(){
     var TAG = this.state.components
-    
     return React.createElement(TAG[this.state.pageName]);
   }
 
@@ -36,11 +36,11 @@ export default class App extends Component{
     //let component = this.state.pageName != 'profile' ? this.renderPage() : null
     return (
       <div className='App'>
-          <Header pageName={'profile'} handleIndex={this.handleIndex} />
-          <Container style={{ width:'100%' }}>
+          <Header pageName={'Home'} handleIndex={this.handleIndex} />
+          <Container>
             {this.renderPage()}
           </Container>
-          <Footer></Footer>
+          <Footer/>
       </div>
     )
   }

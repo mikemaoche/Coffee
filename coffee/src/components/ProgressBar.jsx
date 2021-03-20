@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Progress } from 'semantic-ui-react'
+import { Progress } from 'semantic-ui-react'
 
 export default class ProgressBar extends Component {
   constructor(props){

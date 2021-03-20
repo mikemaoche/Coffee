@@ -4,10 +4,10 @@ body{
 
 .App {
   text-align: center;
-  margin:1rem auto;
+  /* margin:1rem auto;
   padding:0rem;
   border-radius: 8px;
-  width: 80%;
+  width: 80%; */
   background-image: url("../src/images/coffee-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -49,7 +49,7 @@ body{
   }
 }
 
-
+/* personal css */
 
 .footer{
   color:white;
@@ -58,17 +58,28 @@ body{
   border-radius: 4px;
   position: relative;
   bottom: 0;
-  padding: 5em 0em; 
+  padding: 5em 0em;
 }
 
 
 
 .menuHeader{
   background: rgba(0, 0, 0, 0.3) !important;
-  border:1px solid rgba(236, 240, 241,1.0) !important;
+  border-bottom: 1px solid white !important;
+  margin-bottom: 1rem !important;
+  /* border:1px solid rgba(236, 240, 241,1.0) !important; */
 }
+
+
+/* .menuHeader:hover{
+  background: rgba(255, 255, 255, 0.3) !important;
+} */
 
 .personalContainer{
   background: rgba(255, 255, 255, 0.2) !important;
   text-align: left;
+}
+
+.customLabel{
+  color:white !important;
 }

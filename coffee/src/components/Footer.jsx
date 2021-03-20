@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Grid, Header, Image, List, Divider, Segment, Container } from 'semantic-ui-react'
+import { Grid, Header, List, Divider, Segment, Container } from 'semantic-ui-react'
 import FollowAt from "react-social-media-follow";
 
 const links = [
@@ -60,13 +60,13 @@ export default class Footer extends Component{
                         </Grid>
 
                         <Divider inverted section />
-                        <FollowAt links = {links} color={'pink'} hoverColor={'white'}/>
+                        <FollowAt links = {links} color={'#ccae62'} hoverColor={'white'}/>
                         <List horizontal inverted divided link size='small'>
                         <List.Item as='a' href='#'>
                             Site Map
                         </List.Item>
                         <List.Item as='a' href='#'>
-                            Contact Us
+                            Contact Me
                         </List.Item>
                         <List.Item as='a' href='#'>
                             Terms and Conditions

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu,Header,Image } from 'semantic-ui-react'
 
 export default class HomeMenu extends Component {
   constructor(props){
@@ -20,35 +20,41 @@ export default class HomeMenu extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu className='menuHeader' inverted>
-        <Menu.Item>
-          <img src='../coffee-logo.png' />
-        </Menu.Item>
+      <div>
+        <Menu className='menuHeader' inverted>
+          <Menu.Item
+            name='Home'
+            style={{backgroundColor:'rgba(255,255,255,1)'}}
+            onClick={this.handleItemClick}
+          >
+            <Image alt='coffee' src='../coffee-logo.png' avatar />
+          </Menu.Item>
 
-        <Menu.Item
-          name='Home'
-          active={activeItem === 'Home'}
-          onClick={this.handleItemClick}
-        >
-          Home
-        </Menu.Item>
+          <Menu.Item
+            name='Home'
+            active={activeItem === 'Home'}
+            onClick={this.handleItemClick}
+          >
+            Home
+          </Menu.Item>
 
-        <Menu.Item
-          name='skills'
-          active={activeItem === 'skills'}
-          onClick={this.handleItemClick}
-        >
-          Skills
-        </Menu.Item>
+          <Menu.Item
+            name='Projects'
+            active={activeItem === 'projects'}
+            onClick={this.handleItemClick}
+          >
+            Projects
+          </Menu.Item>
 
-        <Menu.Item
-          name='Contact'
-          active={activeItem === 'contact'}
-          onClick={this.handleItemClick}
-        >
-          Contact Me
-        </Menu.Item>
-      </Menu>
+          <Menu.Item
+            name='Contact'
+            active={activeItem === 'contact'}
+            onClick={this.handleItemClick}
+          >
+            Contact Me
+          </Menu.Item>
+        </Menu>
+      </div>
     )
   }
 }
