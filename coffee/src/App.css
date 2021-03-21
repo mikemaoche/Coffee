@@ -1,64 +1,32 @@
+html{
+
+}
 body{
-  background:rgb(10, 21, 31) !important;
+  /* background:rgb(10, 21, 31) !important; */
 }
 
 .App {
   text-align: center;
-  /* margin:1rem auto;
-  padding:0rem;
-  border-radius: 8px;
-  width: 80%; */
   background-image: url("../src/images/coffee-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 /* personal css */
 
 .footer{
+  display: block;
   color:white;
-  background: rgba(0, 0, 0,0.3);
-  border:2px solid rgba(236, 240, 241,1.0);
-  border-radius: 4px;
-  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  border-top:2px solid rgba(236, 240, 241,1.0);
+  position: sticky;
   bottom: 0;
+  
+  width: 100% !important;
   padding: 5em 0em;
+
 }
 
 
@@ -66,7 +34,11 @@ body{
 .menuHeader{
   background: rgba(0, 0, 0, 0.3) !important;
   border-bottom: 1px solid white !important;
-  margin-bottom: 1rem !important;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   /* border:1px solid rgba(236, 240, 241,1.0) !important; */
 }
 
@@ -83,3 +55,28 @@ body{
 .customLabel{
   color:white !important;
 }
+
+
+/* custom banner hero */
+.heroSection{
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  z-index:-1;
+  
+}
+
+.bannerTitle{
+  position: absolute;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  top:40%;
+  left:50%;
+  z-index: 0;
+  font-size: 60px !important;
+  font-family: 'Modak', cursive !important;
+
+}
+

@@ -17,12 +17,10 @@ const Map = (props) => {
 export default Map;
 
 
-{/* <iframe
+{/* <Map 
     width="600"
     height="450"
-    style="border:0"
+    style={{border:0}}
     loading="lazy"
-    allowfullscreen
     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBngV46U18-YJCQfouurYvV90f7I-hSmXU
-        &q=Space+Needle,Seattle+WA">
-</iframe> */}
+        &q=Space+Needle,Seattle+WA"/> */}

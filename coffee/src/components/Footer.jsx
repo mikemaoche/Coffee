@@ -21,8 +21,8 @@ export default class Footer extends Component{
     render(){
         return(
             <div>
-                <Segment vertical>
-                    <Container textAlign='center' className='footer'>
+                <Segment vertical style={{padding:'0rem'}}>
+                    <Container className='footer'>
                         <Grid divided inverted stackable>
                         <Grid.Column width={3}>
                             <Header inverted as='h4' content='Group 1' />

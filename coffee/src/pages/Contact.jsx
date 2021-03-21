@@ -23,7 +23,7 @@ class Contact extends Component {
     render() {
         return (
             <div>
-                <Segment className="personalContainer" style={{color:'white'}}>
+                <Segment className="personalContainer" style={{color:'white', margin:'1rem 0rem'}}>
                     <Grid>
                         <Grid.Column width={4}>
                             <Form onSubmit={this.handleSubmit} ref={this.state.btnSubmit} >

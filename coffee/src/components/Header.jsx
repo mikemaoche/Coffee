@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu,Header,Image } from 'semantic-ui-react'
+import { Menu,Dropdown,Image } from 'semantic-ui-react'
 
 export default class HomeMenu extends Component {
   constructor(props){
@@ -45,13 +45,27 @@ export default class HomeMenu extends Component {
           >
             Projects
           </Menu.Item>
-
+          <Menu.Item
+            name='Testimonials'
+            active={activeItem === 'testimonials'}
+            onClick={this.handleItemClick}
+          >
+            Testimonials
+          </Menu.Item>
           <Menu.Item
             name='Contact'
             active={activeItem === 'contact'}
             onClick={this.handleItemClick}
           >
             Contact Me
+          </Menu.Item>
+          <Menu.Item
+            name='SignUp'
+            active={activeItem === 'signup'}
+            onClick={this.handleItemClick}
+            position='right'
+          >
+            Sign Up
           </Menu.Item>
         </Menu>
       </div>

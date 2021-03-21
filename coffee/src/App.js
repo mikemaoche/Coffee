@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Footer from './components/Footer'
 import {Container} from 'semantic-ui-react'
+import HeroSection from './components/HeroSection';
+import Testimonial from './pages/Testimonial';
 
 
 export default class App extends Component{
@@ -37,8 +39,13 @@ export default class App extends Component{
     return (
       <div className='App'>
           <Header pageName={'Home'} handleIndex={this.handleIndex} />
-          <Container>
-            {this.renderPage()}
+          <HeroSection className="heroSection" />
+          <Container style={{ flexGrow: 1}}>
+            {/* {this.renderPage()} */}
+            <Home/>
+            <Projects/>
+            <Testimonial/>
+            <Contact/>
           </Container>
           <Footer/>
       </div>
