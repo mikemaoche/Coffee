@@ -2,7 +2,7 @@ import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 import React, { Component } from 'react'
 import Header from './components/Header'
-import Home from './pages/Home';
+import Introduction from './pages/Introduction';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Footer from './components/Footer'
@@ -16,17 +16,26 @@ export default class App extends Component{
     super(props)
     this.state={
       pageName:'Home',
-      components:{
-        'Home':Home,
-        'Contact':Contact,
-        'Projects': Projects
-      }
+
     }
     this.handleIndex=this.handleIndex.bind(this)
   }
-  
-  handleIndex(name){
-    this.setState({pageName:name})
+
+  handleIndex(id){
+    // var node = document.getElementById(id)
+    // var headerHeight = 55
+
+    this.setState({pageName:id})
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+    
+    // node.scrollIntoView(true);
+    
+    // var scrolledY = window.scrollY;
+    
+    // if(scrolledY){
+    //   window.scroll(0, scrolledY - headerHeight)
+    // 
+    // }
   }
 
   renderPage(){
@@ -35,17 +44,16 @@ export default class App extends Component{
   }
 
   render(){
-    //let component = this.state.pageName != 'profile' ? this.renderPage() : null
+
     return (
       <div className='App'>
-          <Header pageName={'Home'} handleIndex={this.handleIndex} />
+          <Header id="Home" pageName={this.state.pageName} handleIndex={this.handleIndex} />
           <HeroSection className="heroSection" />
-          <Container style={{ flexGrow: 1}}>
-            {/* {this.renderPage()} */}
-            <Home/>
-            <Projects/>
-            <Testimonial/>
-            <Contact/>
+            <Container style={{ flexGrow: 1,width:'100%'}}>
+              <Introduction id="Introduction"/>
+              <Projects id="Projects" />
+              <Testimonial id="Testimonials"/>
+              <Contact id="Contact"/>
           </Container>
           <Footer/>
       </div>

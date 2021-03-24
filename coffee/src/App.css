@@ -1,8 +1,9 @@
 html{
 
 }
+
 body{
-  /* background:rgb(10, 21, 31) !important; */
+
 }
 
 .App {
@@ -36,10 +37,26 @@ body{
   border-bottom: 1px solid white !important;
   position: fixed;
   top:0;
-  left: 0;
-  width: 100%;
+  right: 2%;
+  width: fit-content;
   z-index: 10;
-  /* border:1px solid rgba(236, 240, 241,1.0) !important; */
+}
+
+.menuHeaderVisible{
+  background: rgb(169, 54, 159) !important;
+  border-bottom: 1px solid white !important;
+  position: fixed;
+  top:0;
+  right: 2%;
+  width: fit-content;
+  z-index: 10;
+}
+
+.logo{
+  position: fixed;
+  top:-50px;
+  left: 0;
+  z-index: 10;
 }
 
 
@@ -48,13 +65,11 @@ body{
 } */
 
 .personalContainer{
-  background: rgba(255, 255, 255, 0.2) !important;
+  background: rgb(0, 0, 0) !important;
   text-align: left;
+  height:1080px;
 }
 
-.customLabel{
-  color:white !important;
-}
 
 
 /* custom banner hero */

@@ -15,7 +15,7 @@ export default class ProgressBar extends Component {
     return (
       <div>
         <label>{this.state.language}</label>
-        <Progress percent={this.state.percent} indicating />
+        <Progress percent={this.state.percent} size="tiny" color="pink" />
       </div>
     )
   }

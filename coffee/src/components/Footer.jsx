@@ -60,7 +60,7 @@ export default class Footer extends Component{
                         </Grid>
 
                         <Divider inverted section />
-                        <FollowAt links = {links} color={'#ccae62'} hoverColor={'white'}/>
+                        <FollowAt links = {links} color={'rgba(230,130,220,1)'} hoverColor={'white'}/>
                         <List horizontal inverted divided link size='small'>
                         <List.Item as='a' href='#'>
                             Site Map

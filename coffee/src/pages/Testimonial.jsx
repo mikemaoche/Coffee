@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import {Form, Button, List, TextArea, Grid, Segment, Item, Image} from 'semantic-ui-react'
+import {Form, Button, List, TextArea, Grid, Segment, Item, Image, Header} from 'semantic-ui-react'
 var randomWords = require('random-words');
 
 class Testimonial extends Component {
     constructor(props){
         super(props)
         this.state={
+            id:props.id,
             note:'',
             guest:'',
             feedingList:[],
@@ -30,7 +31,7 @@ class Testimonial extends Component {
         e.preventDefault();
         var tempGuest= this.state.guest
 
-        if(this.state.guest==''){
+        if(this.state.guest===''){
             tempGuest= randomWords()+ Math.floor(Math.random() * 10000)
         } 
 
@@ -52,12 +53,15 @@ class Testimonial extends Component {
 
     render() {
         return (
-            <Segment className='personalContainer'>
+            <div id={this.state.id}>
+                <Segment style={{ height:'1080px',backgroundColor:'rgba(210,150,220,1)', borderRadius:'none'}}>
+                    <Segment style={{width:"80%", margin:'10rem auto'}}>
                         <Grid>
                             <Grid.Column width={4}>
                                 <Form onSubmit={this.handleSubmit} ref={this.state.btnSubmit} >
                                     <Form.Field >
-                                        <label className='customLabel'>Name</label>
+                                        <Header as="h1">Testimonials</Header>
+                                        <label className='customLabel' style={{textAlign:'left'}}>Name</label>
                                         <input name='guest' placeholder='Enter name or leave it blank...' onChange={this.handleChange}/>
                                         <label className='customLabel' style={{textAlign:'left',marginTop:'1rem'}}>Leave Me A Comment!</label>
                                         <TextArea name='note' value={this.state.value} minLength={4}
@@ -66,32 +70,34 @@ class Testimonial extends Component {
                                     <Button style={{display:'block', float:'right'}} type='submit' value='Submit'>Feed</Button>
                                 </Form>
                             </Grid.Column>
-                                <Segment id='table' style={{width:'60%', margin:'4rem auto', display:'none'}}>
-                                    <Grid>
-                                        <Grid.Column>
-                                            <h1>Testimonials</h1>
-                                            <List>
-                                                {this.state.feedingList.map((arrayItem)=>{
-                                                    return <List.Item>
-                                                        <Item.Group divided>
-                                                            <Item style={{border:'1px solid black', borderRadius:'4px'}}>
-                                                                <Image style={{ margin:'1rem'}} avatar src='./nz-flag.png' />
-                                                                <List.Content style={{ margin:'0.1rem'}}>
-                                                                    <List.Header style={{ margin:'0.3rem 0.5rem'}} as='a'>{arrayItem.guest}</List.Header>
-                                                                    <List.Description style={{  margin:'0.2rem 0.5rem'}}>{arrayItem.note}</List.Description>
-                                                                </List.Content>
-                                                                {/* <Item.Content><Message style={{width:'200px', marginRight: '20px'}}>{note}</Message></Item.Content> */}
-                                                                {/* <Item.Content verticalAlign='middle'><Button style={{height:'100%'}} onClick={this.handleDelete} type="button" value={arrayItem.note}>x</Button></Item.Content> */}
-                                                            </Item>
-                                                        </Item.Group>
-                                                    </List.Item>
-                                                })}
-                                            </List>
-                                        </Grid.Column>
-                                    </Grid>
-                                </Segment>
+                            <Segment id='table' style={{width:'60%', margin:'4rem auto', display:'none'}}>
+                                <Grid>
+                                    <Grid.Column>
+                                        <h1>Testimonials</h1>
+                                        <List>
+                                            {this.state.feedingList.map((arrayItem)=>{
+                                                return <List.Item>
+                                                    <Item.Group divided>
+                                                        <Item style={{border:'1px solid black', borderRadius:'4px'}}>
+                                                            <Image style={{ margin:'1rem'}} avatar src='./nz-flag.png' />
+                                                            <List.Content style={{ margin:'0.1rem'}}>
+                                                                <List.Header style={{ margin:'0.3rem 0.5rem'}} as='a'>{arrayItem.guest}</List.Header>
+                                                                <List.Description style={{  margin:'0.2rem 0.5rem'}}>{arrayItem.note}</List.Description>
+                                                            </List.Content>
+                                                            {/* <Item.Content><Message style={{width:'200px', marginRight: '20px'}}>{note}</Message></Item.Content> */}
+                                                            {/* <Item.Content verticalAlign='middle'><Button style={{height:'100%'}} onClick={this.handleDelete} type="button" value={arrayItem.note}>x</Button></Item.Content> */}
+                                                        </Item>
+                                                    </Item.Group>
+                                                </List.Item>
+                                            })}
+                                        </List>
+                                    </Grid.Column>
+                                </Grid>
+                            </Segment>
                         </Grid>
                     </Segment>
+                </Segment>
+            </div>
         );
     }
 }

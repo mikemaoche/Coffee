@@ -1,11 +1,11 @@
 import React from 'react'
-import coffeeVideo from '../videos/coffee-video.mp4'
+import bannerVideo from '../videos/video.mp4'
 
 const Video = () => {
     return (
         <>
-            <video autoPlay loop muted>
-                <source src={coffeeVideo} type='video/mp4' />
+            <video autoPlay loop muted style={{outline:'4px solid rgba(240,130,240,1)'}}>
+                <source src={bannerVideo} type='video/mp4' />
             </video>
         </>
     )
