@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Segment,Header, Embed, Grid, Container } from 'semantic-ui-react';
-import Slider from '../components/Slider';
+import SliderCarousel from '../components/SliderCarousel';
 
 class Projects extends Component {
     constructor(props){
@@ -36,12 +36,6 @@ class Projects extends Component {
                                         ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
                                         quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
                                         arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                                        Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-                                        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                                        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                        Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
                                         </p>
                                     </Container>
                             </Grid.Column>
@@ -62,9 +56,6 @@ class Projects extends Component {
                                         Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
                                         dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
                                         Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                        Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
                                         </p>
                                     </Container>
                             </Grid.Column>
@@ -98,17 +89,11 @@ class Projects extends Component {
                                         ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
                                         quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
                                         arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                                        Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-                                        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                                        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                        Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
                                         </p>
                                     </Container>
                             </Grid.Column>
                         </Grid>
-                            <Slider />
+                            <SliderCarousel />
                     </Segment>
                 </Segment>
             </div>

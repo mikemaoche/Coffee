@@ -1,4 +1,5 @@
 import './App.css'
+import {Container} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import React, { Component } from 'react'
 import Header from './components/Header'
@@ -6,7 +7,6 @@ import Introduction from './pages/Introduction';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Footer from './components/Footer'
-import {Container} from 'semantic-ui-react'
 import HeroSection from './components/HeroSection';
 import Testimonial from './pages/Testimonial';
 import Spinner from './components/Spinner';
@@ -19,15 +19,26 @@ export default class App extends Component{
     super(props)
     this.state={
       pageName:'Home',
-      isLoading:true
+      isLoading:true,
+      wordsToDescribeMe:[
+        'cool', 'developer', 'open-minded','gamer','kind',''
+      ]
     }
     this.handleIndex=this.handleIndex.bind(this)
+    this.radomWords=this.radomWords.bind(this)
   }
+
+
 
   componentDidMount() {
     setTimeout(() => { 
           this.setState({isLoading: false})
     }, 3000);
+  }
+
+  radomWords(){
+    var words= this.state.wordsToDescribeMe
+    return words[Math.floor(Math.random() * words.length)]
   }
 
   handleIndex(id){
@@ -56,14 +67,14 @@ export default class App extends Component{
     let render= this.state.isLoading? <Spinner/>:
     <div>
       <Header id="Home" pageName={this.state.pageName} handleIndex={this.handleIndex} />
-      <HeroSection className="heroSection" />
+      <HeroSection className="heroSection" handleIndex={this.handleIndex} radomWords={this.radomWords}/>
         <Container style={{ flexGrow: 1,width:'100%'}}>
           <Introduction id="Introduction"/>
           <Projects id="Projects" />
           <Testimonial id="Testimonials"/>
           <Contact id="Contact"/>
       </Container>
-      <Footer/>
+      <Footer id="Footer" />
     </div>
 
     return (

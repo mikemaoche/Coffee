@@ -14,13 +14,13 @@ export default class Footer extends Component{
     constructor(props){
         super(props)
         this.state={
-
+            id:props.id
         }
     }
 
     render(){
         return(
-            <div>
+            <div id={this.state.id}>
                 <Segment vertical style={{padding:'0rem'}}>
                     <Container className='footer'>
                         <Grid divided inverted stackable>

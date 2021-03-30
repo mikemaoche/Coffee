@@ -54,6 +54,8 @@ export default class Introduction extends Component{
                                 <ProgressBar percent={95} language="ReactJS"/>
                                 <ProgressBar percent={90} language="SQL"/>
                                 <ProgressBar percent={70} language="C#"/>
+                                <ProgressBar percent={90} language="PHP"/>
+                                <ProgressBar percent={100} language="CSS"/>
                             </Grid.Column>
                             <Grid.Column width={3} style={{textAlign:'justify', backgroundColor:'rgba(255,255,255,1)', margin:'1rem', borderRadius:'4px', height: 'fit-content'}}>
                                 <h3>Spoken Languages</h3>

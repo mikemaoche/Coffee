@@ -31,7 +31,7 @@ class Testimonial extends Component {
         e.preventDefault();
         var tempGuest= this.state.guest
 
-        if(this.state.guest===''){
+        if(this.state.guest === ''){
             tempGuest= randomWords()+ Math.floor(Math.random() * 10000)
         } 
 
@@ -45,7 +45,7 @@ class Testimonial extends Component {
     }
 
     onEnterPress(e){
-        if(e.keyCode == 13 && e.shiftKey == false) {
+        if(e.keyCode === 13 && e.shiftKey === false) {
             e.preventDefault()
             this.state.btnSubmit.current.handleSubmit(e)   
         }
