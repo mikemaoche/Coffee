@@ -23,40 +23,34 @@ export default class Footer extends Component{
             <div id={this.state.id}>
                 <Segment vertical style={{padding:'0rem'}}>
                     <Container className='footer'>
-                        <Grid divided inverted stackable>
-                        <Grid.Column width={3}>
-                            <Header inverted as='h4' content='Group 1' />
-                            <List link inverted>
-                            <List.Item as='a'>Link One</List.Item>
-                            <List.Item as='a'>Link Two</List.Item>
-                            <List.Item as='a'>Link Three</List.Item>
-                            <List.Item as='a'>Link Four</List.Item>
-                            </List>
-                        </Grid.Column>
-                        <Grid.Column width={3}>
-                            <Header inverted as='h4' content='Group 2' />
-                            <List link inverted>
-                            <List.Item as='a'>Link One</List.Item>
-                            <List.Item as='a'>Link Two</List.Item>
-                            <List.Item as='a'>Link Three</List.Item>
-                            <List.Item as='a'>Link Four</List.Item>
-                            </List>
-                        </Grid.Column>
-                        <Grid.Column width={3}>
-                            <Header inverted as='h4' content='Group 3' />
-                            <List link inverted>
-                            <List.Item as='a'>Link One</List.Item>
-                            <List.Item as='a'>Link Two</List.Item>
-                            <List.Item as='a'>Link Three</List.Item>
-                            <List.Item as='a'>Link Four</List.Item>
-                            </List>
-                        </Grid.Column>
-                        <Grid.Column width={7}>
-                            <Header inverted as='h4' content='Footer Header' />
-                            <p>
-                            Extra space for a call to action inside the footer that could help re-engage users.
-                            </p>
-                        </Grid.Column>
+                        <Grid divided inverted stackable padded>
+                            <Grid.Column></Grid.Column>
+                            <Grid.Column width={4}>
+                                <Container textAlign={'left'}>
+                                    <Header inverted as='h4' content='My Mission' />
+                                    <p>
+                                        Engaged to build the most innovative, costless, and fast Web Technologies to impact
+                                        millions of users on their daily basis. We are looking to ease
+                                        our life by providing high availability, speed, and quality integration.
+                                        
+                                    </p>
+                                </Container>
+                            </Grid.Column>
+                            <Grid.Column width={3}>
+                                <Header inverted as='h4' content='Download My Projects' />
+                                <List link inverted>
+                                    <List.Item as='a' href='https://github.com/mikemaoche/PHPWebsiteEnglishVersion'>Streaming Website</List.Item>
+                                    <List.Item as='a' href='https://github.com/mikemaoche/Xmas'>Christmas Website</List.Item>
+                                    <List.Item as='a' href='https://github.com/mikemaoche/ReduxOnBoarding'>Redux OnBoarding</List.Item>
+                                    <List.Item as='a' href='https://github.com/mikemaoche/PHPWebsiteEnglishVersion'>Automated Appartment Seeker</List.Item>
+                                </List>
+                            </Grid.Column>
+                            
+                           
+                            <Grid.Column width={8}>
+                                <Header inverted as='h4' content='Stay Connected With Me' />
+                                <p>Follow me through social media. If you appreciate leave me a like !</p>
+                            </Grid.Column>
                         </Grid>
 
                         <Divider inverted section />
@@ -64,9 +58,6 @@ export default class Footer extends Component{
                         <List horizontal inverted divided link size='small'>
                         <List.Item as='a' href='#'>
                             Site Map
-                        </List.Item>
-                        <List.Item as='a' href='#'>
-                            Contact Me
                         </List.Item>
                         <List.Item as='a' href='#'>
                             Terms and Conditions

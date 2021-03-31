@@ -54,7 +54,7 @@ class Testimonial extends Component {
     render() {
         return (
             <div id={this.state.id}>
-                <Segment style={{ minHeight:'1080px',backgroundColor:'rgba(210,150,220,1)', borderRadius:'none'}}>
+                <Segment style={{ minHeight:'1080px',backgroundColor:'rgba(0,0,0,0.2)', borderRadius:'none'}}>
                     <Segment style={{width:"80%", margin:'10rem auto'}}>
                         <Grid>
                             <Grid.Column width={4}>

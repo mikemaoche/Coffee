@@ -3,8 +3,6 @@ import { Header } from 'semantic-ui-react'
 import Video from './Video'
 
 const HeroSection = (props) => {
-    console.log(props);
-    
     return (
         <div>
             <Header inverted className="bannerGreeting">Hello, my name is</Header>

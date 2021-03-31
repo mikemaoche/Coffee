@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, Image, Grid, Segment, Item, Header } from 'semantic-ui-react'
+import { Card, Image, Grid, Segment, Item, Header,Reveal } from 'semantic-ui-react'
 import ProgressBar from '../components/ProgressBar'
 
 export default class Introduction extends Component{
@@ -32,8 +32,16 @@ export default class Introduction extends Component{
                         <Header as="h1">About Me</Header>
                         <Grid>
                             <Grid.Column width={4}>
-                                <Card color='blue'>
-                                    <Image src='../myphoto.jpg' wrapped ui={false} />
+                                <Card fluid color='pink'>
+                                    <Reveal animated='small fade'>
+                                        <Reveal.Content visible>
+                                            <Image src='../silver-fern.jpeg' />
+                                        </Reveal.Content>
+                                        <Reveal.Content hidden>
+                                            <Image  src='../myphoto.jpg' ui wrapped={false}/>
+                                        </Reveal.Content>
+                                    </Reveal>
+                                    
                                     <Card.Content>
                                     <Card.Header>Mike Mao Che</Card.Header>
                                     <Card.Meta>

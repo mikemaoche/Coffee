@@ -17,7 +17,7 @@ html,body {
   display: block;
   color:white;
   background: rgba(0, 0, 0, 0.3);
-  border-top:2px solid rgba(236, 240, 241,1.0);
+  border-top:4px solid rgba(240,130,240,1);
   position: sticky;
   bottom: 0;
   
@@ -160,16 +160,19 @@ html,body {
 
 .buttonFooter{
   animation-name: animationFlashing;
-  animation-duration: .5s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
 @keyframes animationFlashing {
-  from {
-    box-shadow: 0 0 20px #ec1480;
+  0% {
+    box-shadow: 0 0 10px #cc00ff;
     
   }
-  to {
-    box-shadow: 0 0 20px #ffffff;
+  50% {
+    box-shadow: 0 0 20px #ff85be;
+  }
+  100% {
+    box-shadow: 0 0 30px #ffffff;
   }
 }

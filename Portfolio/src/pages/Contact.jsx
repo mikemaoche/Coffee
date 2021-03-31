@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Segment, Grid, Form, Button, TextArea, Header, List, Container} from 'semantic-ui-react'
+import Video from '../components/Video'
 
 class Contact extends Component {
     constructor(props){
@@ -24,7 +25,7 @@ class Contact extends Component {
         
         return (
             <div id={this.state.id}>
-                <Segment style={{ backgroundColor:'rgba(230,150,240,1)'}}>
+                <Segment style={{ backgroundColor:'rgba(0,0,0,1)'}}>
                     <Segment style={{width:"80%", margin:'10rem auto'}}>
                         <Grid>
                             <Grid.Column width={4}>
