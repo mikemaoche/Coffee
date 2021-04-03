@@ -14,7 +14,7 @@ class Projects extends Component {
             <div id={this.state.id}>
                 <Segment style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', minHeight:'1080px'}} text>
                     <Segment style={{width:"80%", margin:'10rem auto'}}>
-                            <Header as='h1' style={{marginBottom:'2rem'}}>Projects</Header>
+                            <Header as='h1' style={{marginBottom:'2rem'}}>Personal Projects</Header>
                         <Grid>
                             <Grid.Column width={1}></Grid.Column>
                             <Grid.Column width={5}>
@@ -28,34 +28,25 @@ class Projects extends Component {
                             </Grid.Column>
                             <Grid.Column width={10}>
                                 <Container className="projectContainer" style={{width:'fit-content'}} textAlign="left" text>
-                                        <Header as='h2'>Header</Header>
+                                        <Header as='h2'>Automated Appartment Seeker</Header>
                                         <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                        ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-                                        magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-                                        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-                                        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                                        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                                            It's my first bot creation where the purpose is to seek rental apartments at their lowest prices. 
+                                            With a combination of JavaScript and NodeJS for the Web and Pupeeter for machine learning. The bot
+                                            is looking for the desired Website.
                                         </p>
                                     </Container>
                             </Grid.Column>
                         </Grid>
 
                         <Grid>
-                            <Grid.Column width={1}></Grid.Column>
-                            <Grid.Column width={6}>
+                            <Grid.Column width={8}>
                                 <Container className="projectContainer" style={{width:'fit-content'}} textAlign="right" text>
-                                        <Header as='h2'>Header</Header>
+                                        <Header as='h2'>Christmas Website</Header>
                                         <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                        ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-                                        magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-                                        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-                                        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                                        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                                        Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-                                        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                                        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                                            It's a cultural Web project that integrates Korean and Japanese cultures. The technology to build this website is based on
+                                            JavaScript and JQUERY for the animation, and Bootstrap for the CSS style. In this project,
+                                            I have learned how to use embedded videos and refresh my front-end knowledge. You would be immersed in a winter
+                                            and cherry blossom season. Enjoy the visit!
                                         </p>
                                     </Container>
                             </Grid.Column>
@@ -69,7 +60,6 @@ class Projects extends Component {
                             </Grid.Column>
                         </Grid>
                         <Grid>
-                            <Grid.Column width={1}></Grid.Column>
                             <Grid.Column width={10}>
                                 <Embed
                                     
@@ -79,16 +69,19 @@ class Projects extends Component {
                                     source='youtube'
                                 />
                             </Grid.Column>
-                            <Grid.Column width={4}>
+                            <Grid.Column width={6}>
                                 <Container className="projectContainer" style={{width:'fit-content'}} textAlign="left" text>
-                                        <Header as='h2'>Header</Header>
+                                        <Header as='h2'>Streaming Website</Header>
                                         <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                        ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-                                        magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-                                        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-                                        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                                        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                                        This is one of the most interesting projects that I was working on at the CEGEP of Vieux Montreal.
+                                        Instead of doing an internship as the school was about to. They decided to let students work on a free project.
+                                        It could be Web, Desktop, or mobile application. In my case, I went with an operational Website using PHP,
+                                        DAO Architecture, MySQL database, and homemade CSS. 
+                                        
+                                        The Website contains two UI. One for the users and the
+                                        other one for the admin. The passwords are secured by using HASH and SALT for encryption. We can upload,
+                                        delete, comment, and review the video. Users can request a video that they want to see on streaming to the admin.
+                                        A panel will indicate the queue. The admin can post announcements.
                                         </p>
                                     </Container>
                             </Grid.Column>

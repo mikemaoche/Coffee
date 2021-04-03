@@ -39,10 +39,12 @@ export default class Footer extends Component{
                             <Grid.Column width={3}>
                                 <Header inverted as='h4' content='Download My Projects' />
                                 <List link inverted>
+                                    <List.Item as='a' href='https://github.com/mikemaoche/RecipeFinder'>Recipe Finder</List.Item>
+                                    <List.Item as='a' href='https://github.com/mikemaoche/ReduxOnBoarding'>Redux OnBoarding</List.Item>
                                     <List.Item as='a' href='https://github.com/mikemaoche/PHPWebsiteEnglishVersion'>Streaming Website</List.Item>
                                     <List.Item as='a' href='https://github.com/mikemaoche/Xmas'>Christmas Website</List.Item>
-                                    <List.Item as='a' href='https://github.com/mikemaoche/ReduxOnBoarding'>Redux OnBoarding</List.Item>
                                     <List.Item as='a' href='https://github.com/mikemaoche/PHPWebsiteEnglishVersion'>Automated Appartment Seeker</List.Item>
+                                    
                                 </List>
                             </Grid.Column>
                             
