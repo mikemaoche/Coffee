@@ -6,8 +6,8 @@ export default class SliderCarousel extends Component {
     render() {
         return (
             <div>
-                <Container >
-                  <Slider 
+                <Container>
+                  <Slider
                     className="slider"
                     autoplay slidesToShow={5} 
                     arrows={false} 

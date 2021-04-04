@@ -1,7 +1,8 @@
 import './App.css'
+import $ from 'jquery'; 
+import React, { Component} from 'react'
 import {Container} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
-import React, { Component } from 'react'
 import Header from './components/Header'
 import Introduction from './pages/Introduction';
 import Contact from './pages/Contact';
@@ -10,7 +11,7 @@ import Footer from './components/Footer'
 import HeroSection from './components/HeroSection';
 import Testimonial from './pages/Testimonial';
 import Spinner from './components/Spinner';
-
+import Cube from './components/Cube3D'
 
 
 
@@ -21,7 +22,8 @@ export default class App extends Component{
       pageName:'Home',
       isLoading:true,
       wordsToDescribeMe:[
-        'cool', 'developer', 'open-minded','gamer','kind',''
+        'freaking awesome', 'a developer', 'open-minded',
+        'passionate about coding','kind','enjoying working with people'
       ]
     }
     this.handleIndex=this.handleIndex.bind(this)
@@ -31,9 +33,18 @@ export default class App extends Component{
 
 
   componentDidMount() {
+    
     setTimeout(() => { 
-          this.setState({isLoading: false})
-    }, 3000);
+          $(".preload").fadeOut(500)
+          this.setState({isLoading: false},
+            ()=>{
+              if(!this.state.isLoading) {
+                $(".preload").fadeIn(2000)
+              }
+
+            }
+          )
+    }, 1000);
   }
 
   radomWords(){
@@ -41,21 +52,9 @@ export default class App extends Component{
     return words[Math.floor(Math.random() * words.length)]
   }
 
-  handleIndex(id){
-    // var node = document.getElementById(id)
-    // var headerHeight = 55
-
+  handleIndex(id){ 
     this.setState({pageName:id})
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
-    
-    // node.scrollIntoView(true);
-    
-    // var scrolledY = window.scrollY;
-    
-    // if(scrolledY){
-    //   window.scroll(0, scrolledY - headerHeight)
-    // 
-    // }
   }
 
   renderPage(){
@@ -69,6 +68,7 @@ export default class App extends Component{
       <Header id="Home" pageName={this.state.pageName} handleIndex={this.handleIndex} />
       <HeroSection className="heroSection" handleIndex={this.handleIndex} radomWords={this.radomWords}/>
         <Container style={{ flexGrow: 1,width:'100%'}}>
+          <Cube/>
           <Introduction id="Introduction"/>
           <Projects id="Projects" />
           <Testimonial id="Testimonials"/>

@@ -2,6 +2,7 @@ html,body {
   background: black !important;
  }
 
+
 .App {
   text-align: center;
   background-image: url("../src/images/coffee-bg.jpg");
@@ -16,11 +17,11 @@ html,body {
 .footer{
   display: block;
   color:white;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(153, 73, 146);
   border-top:4px solid rgba(240,130,240,1);
   position: sticky;
   bottom: 0;
-  
+  z-index: 10;
   width: 100% !important;
   padding: 5em 0em;
 
@@ -119,7 +120,7 @@ html,body {
   transform: translate(-50%, -50%);
   width: 40%;
   top:65%;
-  z-index: 0;
+  z-index: 5;
   font-size: 60px !important;
   font-family: 'Modak', cursive !important;
   animation-name: animationRandomWords;
@@ -153,9 +154,9 @@ html,body {
 }
 
 .slider{
-  margin-top:2rem;
-
+  margin-top:2rem; 
 }
+
 
 .buttonFooter{
   animation-name: animationFlashing;
@@ -175,3 +176,19 @@ html,body {
     box-shadow: 0 0 30px #ffffff;
   }
 }
+
+.revealProjects{
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 2s;
+  
+}
+
+.revealProjects:hover{
+  opacity: 1;
+  
+}
+/* 
+.zIndex:hover{
+  background:rgb(153, 73, 146);
+} */

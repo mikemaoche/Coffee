@@ -28,7 +28,7 @@ export default class Introduction extends Component{
         return(
             <div id={this.state.id}>
                 <Segment className='personalContainer'>
-                    <Segment style={{width:"80%", margin:'10rem auto'}}>
+                    <Segment style={{width:"80%", margin:'10rem auto',zIndex:2}}>
                         <Header as="h1">About Me</Header>
                         <Grid>
                             <Grid.Column width={4}>

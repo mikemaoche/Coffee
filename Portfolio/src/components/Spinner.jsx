@@ -20,7 +20,7 @@ const overridePulseLoader = css `
 const color= 'rgba(200,90,250,1)';
 export default function Spinner(){
     return (
-        <div className="sweet-loading">
+        <div>
             <Header as='h1' 
             style={{position:'absolute', fontSize:28, bottom:0, right:'4%',fontFamily: `'Modak', cursive`}} 
             color='purple'>

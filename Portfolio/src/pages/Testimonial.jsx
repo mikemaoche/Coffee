@@ -22,15 +22,13 @@ class Testimonial extends Component {
     }
 
     verifyString(comments){
-        if(comments.length > 0)
-            return true
+        if(comments.length > 0) return true
         return false
     }
-    
-    handleSubmit(e){
-        e.preventDefault();
-        var tempGuest= this.state.guest
 
+    handleSubmit(event){
+        event.preventDefault();
+        var tempGuest= this.state.guest
         if(this.state.guest === ''){
             tempGuest= randomWords()+ Math.floor(Math.random() * 10000)
         } 
@@ -44,23 +42,22 @@ class Testimonial extends Component {
         
     }
 
-    onEnterPress(e){
-        if(e.keyCode === 13 && e.shiftKey === false) {
-            e.preventDefault()
-            this.state.btnSubmit.current.handleSubmit(e)   
+    onEnterPress(event){
+        if(event.keyCode === 13 && event.shiftKey === false) {
+            this.state.btnSubmit.current.handleSubmit(event);
         }
     }
 
     render() {
         return (
             <div id={this.state.id}>
-                <Segment style={{ minHeight:'1080px',backgroundColor:'rgba(0,0,0,0.2)', borderRadius:'none'}}>
-                    <Segment style={{width:"80%", margin:'10rem auto'}}>
+                <Segment style={{ minHeight:'1080px',backgroundColor:'rgba(0,0,0,0.1)', borderRadius:'none'}}>
+                    <Segment style={{width:"80%", margin:'10rem auto',zIndex:3}}>
                         <Grid>
                             <Grid.Column width={4}>
                                 <Form onSubmit={this.handleSubmit} ref={this.state.btnSubmit} >
                                     <Form.Field >
-                                        <Header as="h1">Testimonials</Header>
+                                        <Header as="h1" textAlign='left'>Testimonials</Header>
                                         <label className='customLabel' style={{textAlign:'left'}}>Name</label>
                                         <input name='guest' placeholder='Enter name or leave it blank...' onChange={this.handleChange}/>
                                         <label className='customLabel' style={{textAlign:'left',marginTop:'1rem'}}>Leave Me A Comment!</label>
@@ -70,10 +67,9 @@ class Testimonial extends Component {
                                     <Button style={{display:'block', float:'right'}} type='submit' value='Submit'>Feed</Button>
                                 </Form>
                             </Grid.Column>
-                            <Segment id='table' style={{width:'60%', margin:'4rem auto', display:'none'}}>
+                            <Segment id='table' style={{width:'40%', margin:'4rem auto', display:'none'}}>
                                 <Grid>
                                     <Grid.Column>
-                                        <h1>Testimonials</h1>
                                         <List>
                                             {this.state.feedingList.map((arrayItem)=>{
                                                 return <List.Item>

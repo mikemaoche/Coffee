@@ -12,7 +12,7 @@ class Projects extends Component {
     render() {
         return (
             <div id={this.state.id}>
-                <Segment style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', minHeight:'1080px'}} text>
+                <Segment className='revealProjects'  style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', minHeight:'1080px'}} text>
                     <Segment style={{width:"80%", margin:'10rem auto'}}>
                             <Header as='h1' style={{marginBottom:'2rem'}}>Personal Projects</Header>
                         <Grid>
