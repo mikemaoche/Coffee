@@ -29,9 +29,9 @@ export default class Footer extends Component{
                                 <Container textAlign={'left'}>
                                     <Header inverted as='h4' content='My Mission' />
                                     <p>
-                                        Engaged to build the most innovative, costless, and fast Web Technologies to impact
+                                        Engaged to build the most innovative, costless, and rapid Web Technologies to impact
                                         millions of users on their daily basis. We are looking to ease
-                                        our life by providing high availability, speed, and quality integration.
+                                        our life by providing high availability, capacity, and scalability.
                                         
                                     </p>
                                 </Container>

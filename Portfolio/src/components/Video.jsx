@@ -1,11 +1,10 @@
 import React from 'react'
-import bannerVideo from '../videos/video.mp4'
 
-const Video = () => {
+const Video = (props) => {
     return (
         <>
-            <video autoPlay loop muted style={{outline:'4px solid rgba(240,130,240,1)'}}>
-                <source src={bannerVideo} type='video/mp4' />
+            <video autoPlay={props.autoPlay} loop={props.loop} muted={props.muted} style={props.style} controls={props.controls}>
+                <source src={props.src} type={props.type} />
             </video>
         </>
     )

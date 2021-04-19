@@ -1,46 +1,35 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import {Image, Container} from 'semantic-ui-react'
 import Slider from 'infinite-react-carousel';
 
-export default class SliderCarousel extends Component {
-    render() {
+// onMouseOver={() => setScale('huge')} onMouseOut={() => setScale('medium')} 
+// ()=> <ModalForSlider src={src} />
+const SliderCarousel = (props) => {
+  const [scale, setScale] = useState('medium');
+  
         return (
             <div>
                 <Container>
                   <Slider
                     className="slider"
-                    autoplay slidesToShow={5} 
+                    autoplay slidesToShow={3} 
+                    centerMode={true}
                     arrows={false} 
                     pauseOnHover={true}
                   >
-                    <div>
-                      <Image className="imageSlider" src='/hk-flag.png' size='medium' />
-                    </div>
-                    <div>
-                      <Image className="imageSlider" src='/fr-flag.png' size='medium' />
-                    </div>
-                    <div>
-                      <Image className="imageSlider" src='/nz-flag.png' size='medium' />
-                    </div>
-                    <div>
-                      <Image className="imageSlider" src='/hk-flag.png' size='medium' />
-                    </div>
-                    <div>
-                      <Image className="imageSlider" src='/hk-flag.png' size='medium' />
-                    </div>
-                    <div>
-                      <Image className="imageSlider" src='/fr-flag.png' size='medium' />
-                    </div>
-                    <div>
-                      <Image className="imageSlider" src='/nz-flag.png' size='medium' />
-                    </div>
-                    <div>
-                      <Image className="imageSlider" src='/hk-flag.png' size='medium' />
-                    </div>
+                    {props.images.map((src,index) => {
+                      return (
+                        <div key={index}>
+                          <Image
+                          src={src} size={scale} 
+                          />
+                        </div>
+                      )
+                    })}
                   </Slider>
                 </Container>
                 
             </div>
         )
     }
-}
+export default SliderCarousel

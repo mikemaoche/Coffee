@@ -70,12 +70,19 @@ export default class HomeMenu extends Component {
           >
             Projects
           </Menu.Item>
-          <Menu.Item
+          {/* <Menu.Item
             name='Testimonials'
             active={activeItem === 'Testimonials'}
             onClick={this.handleItemClick}
           >
             Testimonials
+          </Menu.Item> */}
+          <Menu.Item
+            name='Services'
+            active={activeItem === 'Services'}
+            onClick={this.handleItemClick}
+          >
+            Services
           </Menu.Item>
           <Menu.Item
             name='Contact'
@@ -85,8 +92,8 @@ export default class HomeMenu extends Component {
             Contact Me
           </Menu.Item>
         </Menu>
-        <Button name='Contact' onClick={this.handleItemClick} style={{position:'absolute', zIndex:10, top:'42%',left:'42%', width:'200px'}} color="red">Hire Me</Button>
-        <Button className="buttonFooter" name='Footer' onClick={this.handleItemClick} style={{position:'absolute', bottom:'5%', right:'2%'}}
+        <Button name='Contact' onClick={this.handleItemClick} className='hireMe' style={{position:'absolute', zIndex:10, top:'42%',left:'42%', width:'200px'}} color="pink">Hire Me</Button>
+        <Button className="buttonFooter" name='Footer' onClick={this.handleItemClick} style={{position:'absolute', zIndex:10, bottom:'5%', right:'2%'}}
           circular icon='arrow alternate circle down' size="big" color="purple"/>
       </div>
     )

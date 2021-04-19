@@ -7,7 +7,14 @@ export default class ProgressBar extends Component {
       this.state={
           percent:props.percent,
           language:props.language
-      }
+      };
+      
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ 
+      percent: nextProps.percent
+    })
   }
 
 
@@ -15,7 +22,7 @@ export default class ProgressBar extends Component {
     return (
       <div>
         <label>{this.state.language}</label>
-        <Progress percent={this.state.percent} size="tiny" color="pink" />
+        <Progress active percent={this.state.percent} size="tiny" color="pink" />
       </div>
     )
   }

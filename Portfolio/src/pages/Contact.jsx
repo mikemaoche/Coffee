@@ -76,8 +76,8 @@ class Contact extends Component {
         
         return (
             <div id={this.state.id}>
-                <Segment style={{ backgroundColor:'rgba(0,0,0,1)'}}>
-                    <Segment style={{width:"80%", margin:'10rem auto'}}>
+                <Segment style={{ backgroundColor:'rgba(45, 52, 54,1.0)'}}>
+                    <Segment style={{width:"80%", margin:'10rem auto', zIndex:3}}>
                         <Grid>
                             <Grid.Column width={4}>
                                 <Form onSubmit={this.handleSubmit} ref={this.state.btnSubmit} >
@@ -109,7 +109,7 @@ class Contact extends Component {
                                 </Container>
                             </Grid.Column>
                             <Grid.Column width={12}>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.7725469858756!2d174.75614031543472!3d-36.84792307993885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47f1f295562d%3A0xb2cc8c575c4a2e30!2sVictoria%20Street%20West%2C%20Auckland%20Central%2C%20Auckland!5e0!3m2!1sen!2snz!4v1616196885956!5m2!1sen!2snz" width="100%" height="485px" style={{border:0}} allowfullscreen="" loading="lazy"></iframe>
+                                <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.7725469858756!2d174.75614031543472!3d-36.84792307993885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47f1f295562d%3A0xb2cc8c575c4a2e30!2sVictoria%20Street%20West%2C%20Auckland%20Central%2C%20Auckland!5e0!3m2!1sen!2snz!4v1616196885956!5m2!1sen!2snz" width="100%" height="485px" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
                             </Grid.Column>
                         </Grid>
                     </Segment>
