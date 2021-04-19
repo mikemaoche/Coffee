@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio2021.github.io/static/css/main.678bf310.chunk.css",
-    "main.js": "/Portfolio2021.github.io/static/js/main.bf55aa48.chunk.js",
-    "main.js.map": "/Portfolio2021.github.io/static/js/main.bf55aa48.chunk.js.map",
+    "main.js": "/Portfolio2021.github.io/static/js/main.1985919f.chunk.js",
+    "main.js.map": "/Portfolio2021.github.io/static/js/main.1985919f.chunk.js.map",
     "runtime-main.js": "/Portfolio2021.github.io/static/js/runtime-main.9b34df88.js",
     "runtime-main.js.map": "/Portfolio2021.github.io/static/js/runtime-main.9b34df88.js.map",
     "static/css/2.d91dbba8.chunk.css": "/Portfolio2021.github.io/static/css/2.d91dbba8.chunk.css",
@@ -26,6 +26,6 @@
     "static/css/2.d91dbba8.chunk.css",
     "static/js/2.178eea61.chunk.js",
     "static/css/main.678bf310.chunk.css",
-    "static/js/main.bf55aa48.chunk.js"
+    "static/js/main.1985919f.chunk.js"
   ]
 }
