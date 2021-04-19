@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Menu,Image, Button } from 'semantic-ui-react'
-
+import logo from '../images/logo.png';
 
 
 export default class HomeMenu extends Component {
@@ -43,7 +43,7 @@ export default class HomeMenu extends Component {
     return (
       <div id={this.state.id}>
         <Button name='Home' className="logo" style={{borderRadius:'none', backgroundColor:'rgba(0,0,0,0)'}} onClick={this.handleItemClick} as="a">
-          <Image alt='logo' src='../logo.png' />
+          <Image alt='logo' src={logo} />
         </Button>
         <Menu className={this.state.menu ? 'menuHeaderVisible':'menuHeader'} inverted >
           <Menu.Item
