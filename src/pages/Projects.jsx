@@ -5,15 +5,16 @@ import Video from '../components/Video';
 import botVideo from '../videos/bot.mp4'
 import christmasVideo from '../videos/Christmas.mkv'
 import streamingWebsite from '../videos/Anime.mkv'
+import img1 from "../images/projects/img1.png";
+import img2 from "../images/projects/img2.png";
+import img3 from "../images/projects/img3.png";
+import img4 from "../images/projects/img4.png";
+import img5 from "../images/projects/img5.png";
+import img6 from "../images/projects/img6.png";
+import img7 from "../images/projects/img7.png";
 
 const images=[
-    "projects/img1.png",
-    "projects/img2.png",
-    "projects/img3.png",
-    "projects/img4.png",
-    "projects/img5.png",
-    "projects/img6.png",
-    "projects/img7.png",
+    img1,img2,img3,img4,img5,img6,img7
 ]
 
 class Projects extends Component {

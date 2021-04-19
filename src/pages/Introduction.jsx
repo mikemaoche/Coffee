@@ -1,6 +1,11 @@
 import React, { Component, useState } from 'react'
 import { Card, Image, Grid, Segment, Item, Header,Reveal } from 'semantic-ui-react'
 import ProgressBar from '../components/ProgressBar'
+import photo from '../images/myphoto.jpg';
+import fr from '../images/fr-flag.png';
+import nz from '../images/nz-flag.png';
+import hk from '../images/hk-flag.png';
+import silverFern from '../images/silver-fern.jpeg';
 
 export default class Introduction extends Component{
     constructor(props){
@@ -75,10 +80,10 @@ export default class Introduction extends Component{
                                 <Card fluid color='pink'>
                                     <Reveal animated='small fade'>
                                         <Reveal.Content visible>
-                                            <Image src='../silver-fern.jpeg' />
+                                            <Image src={silverFern} />
                                         </Reveal.Content>
                                         <Reveal.Content hidden>
-                                            <Image  src='../myphoto.jpg' ui wrapped={false}/>
+                                            <Image  src={photo} ui wrapped={false}/>
                                         </Reveal.Content>
                                     </Reveal>
                                     <Card.Content>
@@ -113,17 +118,17 @@ export default class Introduction extends Component{
                                 <Header as='h3'>Spoken Languages</Header>
                                 <Item.Group divided>
                                     <Item>
-                                        <Item.Image className='flag' size='tiny' src='../fr-flag.png' />
+                                        <Item.Image className='flag' size='tiny' src={fr} />
                                         <Item.Content verticalAlign='middle'>French</Item.Content>
                                     </Item>
 
                                     <Item>
-                                        <Item.Image className='flag' size='tiny' src='../nz-flag.png' />
+                                        <Item.Image className='flag' size='tiny' src={nz} />
                                         <Item.Content verticalAlign='middle'>English</Item.Content>
                                     </Item>
 
                                     <Item>
-                                        <Item.Image className='flag' size='tiny' src='../hk-flag.png' />
+                                        <Item.Image className='flag' size='tiny' src={hk} />
                                         <Item.Content content='Cantonese' verticalAlign='middle' />
                                     </Item>
                                 </Item.Group>

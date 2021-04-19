@@ -11,8 +11,8 @@ import Footer from './components/Footer'
 import HeroSection from './components/HeroSection';
 // import Testimonial from './pages/Testimonial';
 import Spinner from './components/Spinner';
-import Planet from './components/Planet'
-import Services from './pages/Services'
+import Planet from './components/Planet';
+import Services from './pages/Services';
 
 
 

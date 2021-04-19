@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Segment,Header, Image, Grid, Container } from 'semantic-ui-react';
+import imgDesign from '../images/design.jpg';
+import imgAPI from '../images/api.jpg';
+import imgADS from '../images/ads.jpg';
 
 class Services extends Component {
     constructor(props){
@@ -8,6 +11,7 @@ class Services extends Component {
             id:props.id
         }
     }
+    
     render() {
         return (
             <div id={this.state.id}>
@@ -17,7 +21,7 @@ class Services extends Component {
                         <Grid>
                             <Grid.Column width={1}></Grid.Column>
                             <Grid.Column width={4}>
-                                <Image  className='shake' src='../design.jpg' size='small' bordered />
+                                <Image  className='shake' src={imgDesign} size='small' bordered />
                                 <Container style={{width:'fit-content', marginTop:'2rem'}} textAlign="left" text>
                                         <Header as='h2'>Web Design</Header>
                                         <p>
@@ -27,7 +31,7 @@ class Services extends Component {
                             </Grid.Column>
                             <Grid.Column width={1}></Grid.Column>
                             <Grid.Column width={4}>
-                                <Image className='shake' src='../ads.jpg' size='small' bordered />
+                                <Image className='shake' src={imgADS} size='small' bordered />
                                 <Container style={{width:'fit-content', marginTop:'2rem'}} textAlign="left" text>
                                         <Header as='h2'>Advertising</Header>
                                         <p>
@@ -38,7 +42,7 @@ class Services extends Component {
                             </Grid.Column>
                             <Grid.Column width={1}></Grid.Column>
                             <Grid.Column width={4}>
-                                <Image className='shake' src='../api.jpg' size='small' bordered />
+                                <Image className='shake' src={imgAPI} size='small' bordered />
                                 <Container style={{width:'fit-content', marginTop:'2rem'}} textAlign="left" text>
                                         <Header as='h2'>APIs Integration</Header>
                                         <p>

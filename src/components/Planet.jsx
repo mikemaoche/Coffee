@@ -5,6 +5,8 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader.js';
 import { Canvas, useFrame, useLoader, useThree, extend} from 'react-three-fiber';
 // import { BrowserRouter, Route} from "react-router-dom";
 import { OrbitControls } from 'three-stdlib';
+import tapme from '../images/texture.jpg';
+import planet from '../images/texture2.jpg';
 
 extend({ OrbitControls });
 
@@ -64,8 +66,8 @@ function Planet(props) {
     const mesh = useRef()
     const {position, args, isScrolling} = props
     const [state, setState] = useState({isHovered: false, isActive: false})
-    const texture = useLoader(TextureLoader, '../texture.jpg');
-    const texture2 = useLoader(TextureLoader, '../texture2.jpg');
+    const texture = useLoader(TextureLoader, tapme);
+    const texture2 = useLoader(TextureLoader, planet);
 
     useFrame(()=> {
       mesh.current.rotation.y = mesh.current.rotation.y -= 0.003
