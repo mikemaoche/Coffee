@@ -15,7 +15,7 @@ class Services extends Component {
     render() {
         return (
             <div id={this.state.id}>
-                <Segment  style={{ backgroundColor: 'rgba(95, 39, 205,1.0)', minHeight:'1080px'}} text="true">
+                <Segment  style={{ backgroundColor: '#450099', minHeight:'1080px'}} text="true">
                     <Segment style={{width:"70%", margin:'10rem auto', zIndex:3}}>
                             <Header as='h1' textAlign="left" style={{marginBottom:'2rem'}}>My Services</Header>
                         <Grid>

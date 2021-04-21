@@ -74,14 +74,16 @@ function Planet(props) {
       
       if(isScrolling){
         if(mesh.current.position.x > 0){
-            mesh.current.position.x = mesh.current.position.x -= 0.003
-            mesh.current.position.y = mesh.current.position.y -= 0.001
+            mesh.current.position.x = mesh.current.position.x -= 0.005
+            mesh.current.position.y = mesh.current.position.y -= 0.004
         }
-
-         if(mesh.current.scale.x <= 1.7){
-           mesh.current.scale.x = mesh.current.scale.x += 0.001
-           mesh.current.scale.y = mesh.current.scale.y += 0.001
-           mesh.current.scale.z = mesh.current.scale.z += 0.001
+        
+        console.log(mesh.current.scale.x);
+        
+        if(mesh.current.scale.x < 65){
+           mesh.current.scale.x = mesh.current.scale.x += 0.1
+           mesh.current.scale.y = mesh.current.scale.y += 0.1
+           mesh.current.scale.z = mesh.current.scale.z += 0.1
          }
       }
       
@@ -89,9 +91,9 @@ function Planet(props) {
       { 
         mesh.current.position.x = mesh.current.position.x = position[0]
         mesh.current.position.y = mesh.current.position.y = position[1]
-        mesh.current.scale.x = mesh.current.scale.x = 1
-         mesh.current.scale.y = mesh.current.scale.y = 1
-         mesh.current.scale.z = mesh.current.scale.z = 1
+        mesh.current.scale.x = mesh.current.scale.x = 0.01
+         mesh.current.scale.y = mesh.current.scale.y = 0.01
+         mesh.current.scale.z = mesh.current.scale.z = 0.01
       }
     })
     
@@ -111,13 +113,13 @@ function Planet(props) {
 
 export default function App(props){
     return(
-          <Canvas style={{position:'fixed', top:0, zIndex:3, height:'1080px'}}>
+          <Canvas style={{position:'absolute', top:0, ledft:0, zIndex:1, height:'1080px'}}>
             <ambientLight intensity={0.2} />
             <pointLight position={[-30,5]} />
             {/* React wants us to display something else while the texture is rendering */}
             {/* <BrowserRouter> */}
               <Suspense fallback={null}>
-                <Planet isScrolling={props.isScrolling} args={[0.8,32,32]} position={[2.5,1.2,1]} />
+                <Planet isScrolling={props.isScrolling} args={[0.01,32,32]} position={[3.5,2,0]} />
                 {/* <Route path='/' component={MainApp} /> */}
               </Suspense>
             {/* </BrowserRouter> */}

@@ -24,7 +24,7 @@ export default class App extends Component{
       isLoading:true,
       wordsToDescribeMe:[
         'a fast-learner', 'a developer', 'open-minded',
-        'passionate about coding','creative','enjoying working with people'
+        'passionate about coding','enjoying working with people'
       ],
       isScrolling:false
     }
@@ -32,8 +32,6 @@ export default class App extends Component{
     this.randomWords=this.randomWords.bind(this)
     this.handleScroll=this.handleScroll.bind(this)
   }
-
-
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);

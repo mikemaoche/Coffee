@@ -6,9 +6,8 @@ import bannerVideo from '../videos/video.mp4'
 const HeroSection = (props) => {
     return (
         <div>
-            <Header inverted className="bannerGreeting">Hello, my name is</Header>
-            <Header inverted className="bannerName">Mike</Header>
-            <Header inverted className="bannerRandomWord">I am</Header>
+            <Header inverted className="bannerGreeting">Hello, my name is Mike.</Header>
+            <Header inverted className="bannerIam">I am</Header>
             <p className="randomWords">{props.randomWords()}</p>
             <Video src={bannerVideo} type={'video/mp4'} 
                 autoPlay={true} loop={true} muted={true} style={{outline:'5px solid rgb(225,138,234)'}}
