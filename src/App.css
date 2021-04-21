@@ -5,7 +5,8 @@
 
 html,body { 
   background: black !important;
-  width:100% !important;
+  min-width: 600px;
+  max-width:2000px;
 }
 
 
