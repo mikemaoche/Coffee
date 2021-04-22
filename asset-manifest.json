@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Portfolio2021.github.io/static/css/main.96a0fd14.chunk.css",
-    "main.js": "/Portfolio2021.github.io/static/js/main.54b87ecf.chunk.js",
-    "main.js.map": "/Portfolio2021.github.io/static/js/main.54b87ecf.chunk.js.map",
+    "main.css": "/Portfolio2021.github.io/static/css/main.5e72800c.chunk.css",
+    "main.js": "/Portfolio2021.github.io/static/js/main.19b29989.chunk.js",
+    "main.js.map": "/Portfolio2021.github.io/static/js/main.19b29989.chunk.js.map",
     "runtime-main.js": "/Portfolio2021.github.io/static/js/runtime-main.9b34df88.js",
     "runtime-main.js.map": "/Portfolio2021.github.io/static/js/runtime-main.9b34df88.js.map",
     "static/css/2.d91dbba8.chunk.css": "/Portfolio2021.github.io/static/css/2.d91dbba8.chunk.css",
-    "static/js/2.178eea61.chunk.js": "/Portfolio2021.github.io/static/js/2.178eea61.chunk.js",
-    "static/js/2.178eea61.chunk.js.map": "/Portfolio2021.github.io/static/js/2.178eea61.chunk.js.map",
+    "static/js/2.a990edd2.chunk.js": "/Portfolio2021.github.io/static/js/2.a990edd2.chunk.js",
+    "static/js/2.a990edd2.chunk.js.map": "/Portfolio2021.github.io/static/js/2.a990edd2.chunk.js.map",
     "static/js/3.493d867e.chunk.js": "/Portfolio2021.github.io/static/js/3.493d867e.chunk.js",
     "static/js/3.493d867e.chunk.js.map": "/Portfolio2021.github.io/static/js/3.493d867e.chunk.js.map",
     "index.html": "/Portfolio2021.github.io/index.html",
     "static/css/2.d91dbba8.chunk.css.map": "/Portfolio2021.github.io/static/css/2.d91dbba8.chunk.css.map",
-    "static/css/main.96a0fd14.chunk.css.map": "/Portfolio2021.github.io/static/css/main.96a0fd14.chunk.css.map",
-    "static/js/2.178eea61.chunk.js.LICENSE.txt": "/Portfolio2021.github.io/static/js/2.178eea61.chunk.js.LICENSE.txt",
+    "static/css/main.5e72800c.chunk.css.map": "/Portfolio2021.github.io/static/css/main.5e72800c.chunk.css.map",
+    "static/js/2.a990edd2.chunk.js.LICENSE.txt": "/Portfolio2021.github.io/static/js/2.a990edd2.chunk.js.LICENSE.txt",
     "static/media/Anime.e56c49cb.mkv": "/Portfolio2021.github.io/static/media/Anime.e56c49cb.mkv",
     "static/media/Christmas.b39c324c.mkv": "/Portfolio2021.github.io/static/media/Christmas.b39c324c.mkv",
-    "static/media/App.css": "/Portfolio2021.github.io/static/media/background.cf861ea4.jpg",
     "static/media/ads.1e780c04.jpg": "/Portfolio2021.github.io/static/media/ads.1e780c04.jpg",
     "static/media/api.0139b177.jpg": "/Portfolio2021.github.io/static/media/api.0139b177.jpg",
+    "static/media/App.css": "/Portfolio2021.github.io/static/media/background.cf861ea4.jpg",
     "static/media/bot.1fbbfaef.mp4": "/Portfolio2021.github.io/static/media/bot.1fbbfaef.mp4",
     "static/media/semantic.min.css": "/Portfolio2021.github.io/static/media/outline-icons.ddae9b1b.woff",
     "static/media/fr-flag.6719408a.png": "/Portfolio2021.github.io/static/media/fr-flag.6719408a.png",
@@ -38,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.9b34df88.js",
     "static/css/2.d91dbba8.chunk.css",
-    "static/js/2.178eea61.chunk.js",
-    "static/css/main.96a0fd14.chunk.css",
-    "static/js/main.54b87ecf.chunk.js"
+    "static/js/2.a990edd2.chunk.js",
+    "static/css/main.5e72800c.chunk.css",
+    "static/js/main.19b29989.chunk.js"
   ]
 }
