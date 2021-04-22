@@ -2,7 +2,8 @@ import React, { useRef, useState, Suspense } from 'react'
 // import Camera from './Camera'
 // import * as THREE from "three";
 import { TextureLoader } from 'three/src/loaders/TextureLoader.js';
-import { Canvas, useFrame, useLoader, useThree, extend} from 'react-three-fiber';
+// useThree
+import { Canvas, useFrame, useLoader, extend} from 'react-three-fiber'; 
 // import { BrowserRouter, Route} from "react-router-dom";
 import { OrbitControls } from 'three-stdlib';
 import tapme from '../images/texture.jpg';
@@ -64,36 +65,37 @@ extend({ OrbitControls });
 
 function Planet(props) {
     const mesh = useRef()
-    const {position, args, isScrolling} = props
+    const {args, isScrolling} = props
     const [state, setState] = useState({isHovered: false, isActive: false})
     const texture = useLoader(TextureLoader, tapme);
     const texture2 = useLoader(TextureLoader, planet);
 
     useFrame(()=> {
-      mesh.current.rotation.y = mesh.current.rotation.y -= 0.003
+      mesh.current.rotation.y = mesh.current.rotation.y -= 0.004
       
       if(isScrolling){
-        if(mesh.current.position.x > 0){
-            mesh.current.position.x = mesh.current.position.x -= 0.005
-            mesh.current.position.y = mesh.current.position.y -= 0.004
-        }
         
-        console.log(mesh.current.scale.x);
+        if(mesh.current.position.x > 0) mesh.current.position.x = mesh.current.position.x -= 0.013
+        if(mesh.current.position.y > -2.7) mesh.current.position.y = mesh.current.position.y -= 0.013
         
         if(mesh.current.scale.x < 65){
-           mesh.current.scale.x = mesh.current.scale.x += 0.1
-           mesh.current.scale.y = mesh.current.scale.y += 0.1
-           mesh.current.scale.z = mesh.current.scale.z += 0.1
+           mesh.current.scale.x = mesh.current.scale.x += 0.15
+           mesh.current.scale.y = mesh.current.scale.y += 0.15
+           mesh.current.scale.z = mesh.current.scale.z += 0.15
          }
       }
       
       if(!isScrolling) 
       { 
-        mesh.current.position.x = mesh.current.position.x = position[0]
-        mesh.current.position.y = mesh.current.position.y = position[1]
-        mesh.current.scale.x = mesh.current.scale.x = 0.01
-         mesh.current.scale.y = mesh.current.scale.y = 0.01
-         mesh.current.scale.z = mesh.current.scale.z = 0.01
+        // if(mesh.current.scale.x > 0.01 ){
+        //   mesh.current.scale.x = mesh.current.scale.x -= 0.15
+        //   mesh.current.scale.y = mesh.current.scale.y -= 0.15
+        //   mesh.current.scale.z = mesh.current.scale.z -= 0.15
+        // }
+        // if(mesh.current.scale.x < 0.01) {
+        //   mesh.current.position.x = position[0]
+        //   mesh.current.position.y = position[1]
+        // }
       }
     })
     
@@ -113,13 +115,13 @@ function Planet(props) {
 
 export default function App(props){
     return(
-          <Canvas style={{position:'absolute', top:0, ledft:0, zIndex:1, height:'1080px'}}>
+          <Canvas style={{position:'absolute', top:0, ledft:0, zIndex:1, width:'100vw', height:'100vh'}}>
             <ambientLight intensity={0.2} />
             <pointLight position={[-30,5]} />
             {/* React wants us to display something else while the texture is rendering */}
             {/* <BrowserRouter> */}
               <Suspense fallback={null}>
-                <Planet isScrolling={props.isScrolling} args={[0.01,32,32]} position={[3.5,2,0]} />
+                <Planet isScrolling={props.isScrolling} args={[0.01,32,32]} position={[3.5,3,0]} />
                 {/* <Route path='/' component={MainApp} /> */}
               </Suspense>
             {/* </BrowserRouter> */}

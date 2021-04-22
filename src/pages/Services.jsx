@@ -25,7 +25,7 @@ class Services extends Component {
                                 <Container style={{width:'fit-content', marginTop:'2rem'}} textAlign="left" text>
                                         <Header as='h2'>Web Design</Header>
                                         <p>
-                                            Create colorful, practical, and ethical layers using latest Web technologies.
+                                            Create solid visual, intuitive, and user friendly using latest Web technologies.
                                         </p>
                                     </Container>
                             </Grid.Column>
@@ -33,10 +33,10 @@ class Services extends Component {
                             <Grid.Column width={4}>
                                 <Image className='shake' src={imgADS} size='small' bordered />
                                 <Container style={{width:'fit-content', marginTop:'2rem'}} textAlign="left" text>
-                                        <Header as='h2'>Advertising</Header>
+                                        <Header as='h2'>Marketing</Header>
                                         <p>
-                                            Promote your company services and products via networking, 
-                                            Solid SEO referencing, social media, etc.
+                                            Promote your company services and products via links, 
+                                            strong SEO, emails, keywords optimisation and more.
                                         </p>
                                     </Container>
                             </Grid.Column>
@@ -46,7 +46,7 @@ class Services extends Component {
                                 <Container style={{width:'fit-content', marginTop:'2rem'}} textAlign="left" text>
                                         <Header as='h2'>APIs Integration</Header>
                                         <p>
-                                           Multiple Web services can be implemented into your project.
+                                           Multiple services such as Google, Youtube, Facebook API, and more can be integrated into a tailor project.
                                         </p>
                                     </Container>
                             </Grid.Column>

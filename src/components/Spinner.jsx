@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from "@emotion/core";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import PulseLoader from "react-spinners/PulseLoader";
 import { Header } from 'semantic-ui-react';
 
@@ -22,17 +22,17 @@ export default function Spinner(){
     return (
         <div>
             <Header as='h1' 
-            style={{position:'absolute', fontSize:28, bottom:0, right:'4%',fontFamily: `'Modak', cursive`}} 
+            style={{position:'absolute', fontSize:30, bottom:0, right:'4%'}} 
             color='purple'>
                 LOADING
             </Header>
             <PulseLoader 
                 loading={true}
                 css={overridePulseLoader}
-                size={10}
+                size={6}
                 color={color}
             />
-            <ClimbingBoxLoader
+            <ScaleLoader
                 loading={true}
                 css={overrideClimbLoader}
                 size={10}

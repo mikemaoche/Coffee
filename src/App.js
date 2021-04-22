@@ -9,12 +9,12 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Footer from './components/Footer'
 import HeroSection from './components/HeroSection';
-// import Testimonial from './pages/Testimonial';
 import Spinner from './components/Spinner';
 import Planet from './components/Planet';
 import Services from './pages/Services';
 
 
+const self = window
 
 export default class App extends Component{
   constructor(props){
@@ -23,9 +23,10 @@ export default class App extends Component{
       pageName:'Home',
       isLoading:true,
       wordsToDescribeMe:[
-        'a fast-learner', 'a developer', 'open-minded',
-        'passionate about coding','enjoying working with people'
+        'a fast-learner', 'a developer', 'adaptable',
+        'passionate about programming','a team player'
       ],
+      word:"",
       isScrolling:false
     }
     this.handleIndex=this.handleIndex.bind(this)
@@ -34,9 +35,10 @@ export default class App extends Component{
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    self.addEventListener('scroll', this.handleScroll);
+    this.randomWords();
     setTimeout(() => { 
-          $(".preload").fadeOut(200)
+          $(".preload").fadeOut(300)
           this.setState({isLoading: false},
             ()=>{
               if(!this.state.isLoading) {
@@ -45,17 +47,18 @@ export default class App extends Component{
 
             }
           )
-    }, 1000);
+    }, 1500);
   }
 
   handleScroll(event) {
-    if (window.scrollY === 0) this.setState({ isScrolling: false }) 
-    if (window.scrollY > 0 ) this.setState({ isScrolling:true})
+    if (self.scrollY === 0) this.setState({ isScrolling: false }) 
+    if (self.scrollY > 0 ) this.setState({ isScrolling:true})
   }
 
   randomWords(){
-    var words= this.state.wordsToDescribeMe
-    return words[Math.floor(Math.random() * words.length)]
+    var words = this.state.wordsToDescribeMe
+    var word = words[Math.floor(Math.random() * words.length)]
+    this.setState({word})
   }
 
   handleIndex(id){ 
@@ -69,10 +72,11 @@ export default class App extends Component{
   }
 
   render(){
+    
     let render= this.state.isLoading? <Spinner/>:
     <div>
         <Header id="Home" pageName={this.state.pageName} handleIndex={this.handleIndex} />
-        <HeroSection className="heroSection" handleIndex={this.handleIndex} randomWords={this.randomWords}/>
+        <HeroSection className="heroSection" handleIndex={this.handleIndex} word={this.state.word}/>
           <Container style={{ flexGrow: 1,width:'100%'}}>
             <Planet isScrolling={this.state.isScrolling} />
             <Introduction id="Introduction"/>

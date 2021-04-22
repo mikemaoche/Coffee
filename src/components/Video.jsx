@@ -5,6 +5,7 @@ const Video = (props) => {
         <>
             <video autoPlay={props.autoPlay} loop={props.loop} muted={props.muted} style={props.style} controls={props.controls}>
                 <source src={props.src} type={props.type} />
+                Your browser does not support the video tag.
             </video>
         </>
     )

@@ -23,22 +23,21 @@ export default class Footer extends Component{
             <div id={this.state.id}>
                 <Segment vertical style={{padding:'0rem'}}>
                     <Container className='footer'>
-                        <Grid divided inverted stackable padded>
-                            <Grid.Column></Grid.Column>
+                        <Grid inverted columns={3}>
                             <Grid.Column width={4}>
-                                <Container textAlign={'left'}>
+                                <Container textAlign='left'>
                                     <Header inverted as='h4' content='My Mission' />
                                     <p>
-                                        Engaged to build the most innovative, costless, and rapid Web Technologies to impact
-                                        millions of users on their daily basis. We are looking to ease
-                                        our life by providing high availability, capacity, and scalability.
+                                        Engaged to build the most innovative, inexpensive, and rapid Web Technologies to impact
+                                        millions of users on their daily basis. I am looking to ease
+                                        user's life by providing high availability, capacity, and performance based on offers and demands.
                                         
                                     </p>
                                 </Container>
                             </Grid.Column>
-                            <Grid.Column width={3}>
-                                <Header inverted as='h4' content='Download My Projects' />
-                                <List link inverted>
+                            <Grid.Column width={4}>
+                                <Header inverted as='h4' textAlign='left' content='View Source Code on Github' />
+                                <List link inverted style={{textAlign:'left'}}>
                                     <List.Item as='a' href='https://github.com/mikemaoche/RecipeFinder'>Recipe Finder</List.Item>
                                     <List.Item as='a' href='https://github.com/mikemaoche/ReduxOnBoarding'>Redux OnBoarding</List.Item>
                                     <List.Item as='a' href='https://github.com/mikemaoche/PHPWebsiteEnglishVersion'>Streaming Website</List.Item>
@@ -47,14 +46,11 @@ export default class Footer extends Component{
                                     
                                 </List>
                             </Grid.Column>
-                            
-                           
                             <Grid.Column width={8}>
                                 <Header inverted as='h4' content='Stay Connected With Me' />
                                 <p>Follow me through social media. If you appreciate leave me a like !</p>
                             </Grid.Column>
                         </Grid>
-
                         <Divider inverted section />
                         <FollowAt links = {links} color={'rgba(230,130,220,1)'} hoverColor={'white'}/>
                         <List horizontal inverted divided link size='small'>
