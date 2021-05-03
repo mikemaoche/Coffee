@@ -63,9 +63,9 @@ export default class Introduction extends Component{
         return(
             <div id={this.state.id}>
                 <Segment className='personalContainer'>
-                    <Segment style={{width:"80%", margin:'10rem auto',zIndex:3}}>
+                    <Segment style={{width:"90%", margin:'10rem auto',zIndex:3}}>
                         <Header as="h1">Profile</Header>
-                        <Grid>
+                        <Grid stackable>
                             <Grid.Column width={4}>
                                 <Card fluid color='pink'>
                                     <Reveal animated='small fade'>

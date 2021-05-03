@@ -82,7 +82,6 @@ export default class App extends Component{
             <Introduction id="Introduction"/>
             <Projects id="Projects" />
             <Services id="Services"/>
-            {/* <Testimonial id="Testimonials"/> */}
             <Contact id="Contact"/>
         </Container>
         <Footer id="Footer" />

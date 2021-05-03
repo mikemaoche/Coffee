@@ -7,19 +7,8 @@
   font-size: 16px;
 }
 
-:root{
-  /* height:50vh !important; */
-}
-
-html{
-  /* height: 100% !important; */
-  /* border:1px dashed red; */
-}
-
 body { 
-  background: black !important;
-  /* height: 100vh;
-  border:1px dashed red; */
+  /* background: black !important; */
 }
 
 .header{
@@ -32,8 +21,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
-  /* min-height: 100vh; */
-  /* border:1px dashed red; */
 }
 
 
@@ -50,7 +37,10 @@ body {
   width: 100% !important;
   margin:0;
   padding: 3em 3em 2em 3em;
+}
 
+.footer p{
+  text-align: left;
 }
 
 
@@ -198,6 +188,7 @@ body {
   z-index: 3;
   opacity: 0;
   transition: opacity 2s;
+  border:none !important;
   
 }
 
@@ -238,4 +229,95 @@ body {
 .hireMe:hover{
   transition-duration: 0.3s !important;
   background:rgb(153, 73, 146) !important;
+}
+
+
+.hamburger{
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  z-index: 10 !important;
+}
+
+
+
+/* mobile */
+@media (min-width: 320px) and (max-width: 1024px) {
+  html,body{
+  }
+
+  .App {
+    text-align: center;
+    background-image: url("../src/images/background.jpg");
+    background-repeat: no-repeat;
+    /* background-attachment: */
+    background-size: cover;
+  }
+  .personalFont{
+    font-size: 1em !important;
+    text-transform: uppercase !important;
+    font-weight: 700;
+    text-shadow: 2px 4px 20px #924df9;
+  }
+
+  .logo{
+    position: absolute;
+    top:0em;
+    left:4em;
+    z-index: 10;
+    width:inherit;
+  }
+
+  .videoBanner{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hireMe{
+    position:absolute; 
+    z-index:10; 
+    top:20em !important;
+    left:6em !important; 
+    width:100px;
+  }
+
+  /* .heroSection{
+    width: inherit;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index:-1;
+    
+  } */
+
+  .menuHeader{
+    top:0;
+    left:0;
+  }
+  
+  .menuHeaderVisible{
+    top:0;
+    left:0;
+  }
+
+  .buttonFooter{
+    left:1em;
+  }
+
+  .randomWords {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    top:27em;
+    left:8em;
+    z-index: 5;
+    /* border:1px dashed red !important; */
+    color: rgb(185, 46, 178);
+  }
+
+  .revealContainer{
+    opacity: 1;
+  }
 }

@@ -3,14 +3,16 @@ import React, { useRef, useState, Suspense } from 'react'
 // import * as THREE from "three";
 import { TextureLoader } from 'three/src/loaders/TextureLoader.js';
 // useThree
-import { Canvas, useFrame, useLoader, extend} from 'react-three-fiber'; 
+import { Canvas, useFrame, useLoader, extend } from 'react-three-fiber'; 
 // import { BrowserRouter, Route} from "react-router-dom";
 import { OrbitControls } from 'three-stdlib';
 import tapme from '../images/texture.jpg';
 import planet from '../images/texture2.jpg';
 
 extend({ OrbitControls });
-
+const styles={
+  canvas:{position:'absolute', top:0, left:0, zIndex:1, height:'100vh'}
+}
 
 // const Controls = () => {
 //   const controls = useRef()
@@ -93,8 +95,8 @@ function Planet(props) {
         //   mesh.current.scale.z = mesh.current.scale.z -= 0.15
         // }
         // if(mesh.current.scale.x < 0.01) {
-        //   mesh.current.position.x = position[0]
-        //   mesh.current.position.y = position[1]
+          // mesh.current.position.x = position[0]
+          // mesh.current.position.y = position[1]
         // }
       }
     })
@@ -115,7 +117,7 @@ function Planet(props) {
 
 export default function App(props){
     return(
-          <Canvas style={{position:'absolute', top:0, ledft:0, zIndex:1, width:'100vw', height:'100vh'}}>
+          <Canvas style={styles.canvas}>
             <ambientLight intensity={0.2} />
             <pointLight position={[-30,5]} />
             {/* React wants us to display something else while the texture is rendering */}

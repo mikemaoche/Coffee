@@ -28,9 +28,9 @@ class Projects extends Component {
         return (
             <div id={this.state.id}>
                 <Segment className='revealContainer'  style={{ backgroundColor: 'rgba(255,120,255, 0)', minHeight:'1080px'}} text="true">
-                    <Segment style={{width:"80%", margin:'10rem auto'}}>
+                    <Segment style={{width:"90%", margin:'10rem auto'}}>
                             <Header textAlign="left" as='h1' style={{marginBottom:'2rem'}}>Personal Projects</Header>
-                        <Grid columns={2} divided>
+                        <Grid columns={2} divided stackable>
                             <Grid.Row stretched>
                                 <Grid.Column width={10}>
                                     <Video src={botVideo} type={'video/mp4'}  controls='controls'
@@ -49,8 +49,8 @@ class Projects extends Component {
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
-
-                        <Grid columns={2} divided>
+                        
+                        <Grid columns={2} divided stackable>
                             <Grid.Row stretched>
                                 <Grid.Column width={8}>
                                     <Container className="projectContainer" style={{width:'fit-content'}} textAlign="right" text>
@@ -70,7 +70,7 @@ class Projects extends Component {
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
-                        <Grid columns={2} divided>
+                        <Grid columns={2} divided stackable>
                             <Grid.Row stretched>
                                 <Grid.Column width={10}>
                                     <Video src={streamingWebsite} type={'video/mp4'}  controls='controls'
@@ -95,7 +95,7 @@ class Projects extends Component {
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
-                            <SliderCarousel images={images} />
+                        <SliderCarousel images={images} />
                     </Segment>
                 </Segment>
             </div>

@@ -6,11 +6,11 @@ import bannerVideo from '../videos/video.mp4'
 
 const HeroSection = (props) => {
     return (
-        <div style={{background:'rgb(0,0,0)'}}>
+        <div id='banner' style={{background:'rgb(0,0,0)'}}>
             <Header inverted className="bannerGreeting personalFont">Hello, my name is Mike.</Header>
             <Header inverted className="bannerIam personalFont">I am</Header>
             <p className="randomWords personalFont">{props.word}</p>
-            <Video src={bannerVideo} type={'video/mp4'} 
+            <Video src={bannerVideo} type={'video/mp4'} className='videoBanner'
                 autoPlay={true} loop={true} muted={true} style={{outline:'4px solid rgba(240,130,240,1)'}}
             />
         </div>

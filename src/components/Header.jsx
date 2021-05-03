@@ -2,6 +2,17 @@ import React, { Component } from 'react'
 import { Menu,Image, Button } from 'semantic-ui-react'
 import logo from '../images/logo.png';
 
+const styles ={
+  hireMe:{
+    position:'absolute', zIndex:10, top:'42%',left:'43.5%', width:'200px'
+  },
+  logo:{
+    borderRadius:'none', backgroundColor:'rgba(0,0,0,0)'
+  },
+  buttonFooter:{
+    position:'fixed', zIndex:10, bottom:'5%', right:'2%'
+  }
+}
 
 export default class HomeMenu extends Component {
   constructor(props){
@@ -17,7 +28,7 @@ export default class HomeMenu extends Component {
   }
 
   handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: name },this.props.handleIndex(name)) 
+    this.setState({ activeItem: name},this.props.handleIndex(name)) 
   }
 
   changeBgMenu(){
@@ -25,32 +36,27 @@ export default class HomeMenu extends Component {
     
     if(window.scrollY >=55){
       menu=true
-    } else{
+    } else {
       menu=false
     }
-    this.setState({
-      menu
-    })
     
+    this.setState({ menu})
   }
   
-  
-
   render() {
     window.addEventListener('scroll',this.changeBgMenu);
     const { activeItem } = this.state
-
+    
     return (
       <div id={this.state.id}>
-        <Button name='Home' className="logo" style={{borderRadius:'none', backgroundColor:'rgba(0,0,0,0)'}} onClick={this.handleItemClick} as="a">
+        <Button name='Home' className="logo" style={styles.logo} onClick={this.handleItemClick} as="a">
           <Image alt='logo' src={logo} />
         </Button>
-        <Menu className={this.state.menu ? 'menuHeaderVisible':'menuHeader'} inverted >
+        <Menu className={this.state.menu ? 'menuHeaderVisible':'menuHeader'} inverted stackable>
           <Menu.Item
             name='Home'
             active={activeItem === 'Home'}
             onClick={this.handleItemClick}
-            
           >
             Home
           </Menu.Item>
@@ -70,13 +76,6 @@ export default class HomeMenu extends Component {
           >
             Projects
           </Menu.Item>
-          {/* <Menu.Item
-            name='Testimonials'
-            active={activeItem === 'Testimonials'}
-            onClick={this.handleItemClick}
-          >
-            Testimonials
-          </Menu.Item> */}
           <Menu.Item
             name='Services'
             active={activeItem === 'Services'}
@@ -92,8 +91,8 @@ export default class HomeMenu extends Component {
             Contact Me
           </Menu.Item>
         </Menu>
-        <Button name='Contact' onClick={this.handleItemClick} className='hireMe' style={{position:'absolute', zIndex:10, top:'42%',left:'43.5%', width:'200px'}} color="pink">Hire Me</Button>
-        <Button className="buttonFooter" name='Footer' onClick={this.handleItemClick} style={{position:'fixed', zIndex:10, bottom:'5%', right:'2%'}}
+        <Button name='Contact' onClick={this.handleItemClick} className='hireMe' style={styles.hireMe} color="pink">Hire Me</Button>
+        <Button className="buttonFooter" name='Footer' onClick={this.handleItemClick} style={styles.buttonFooter}
           circular icon='arrow alternate circle down' size="big" color="purple"/>
       </div>
     )

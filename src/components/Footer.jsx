@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Grid, Header, List, Divider, Segment, Container } from 'semantic-ui-react'
+import { Grid, Header, List, Divider } from 'semantic-ui-react'
 import FollowAt from "react-social-media-follow";
 
 const links = [
@@ -21,19 +21,16 @@ export default class Footer extends Component{
     render(){
         return(
             <div id={this.state.id}>
-                <Segment vertical style={{padding:'0rem'}}>
-                    <Container className='footer'>
-                        <Grid inverted columns={3}>
+                    <div className='footer'>
+                        <Grid stackable inverted>
                             <Grid.Column width={4}>
-                                <Container textAlign='left'>
-                                    <Header inverted as='h4' content='My Mission' />
-                                    <p>
-                                        Engaged to build the most innovative, inexpensive, and rapid Web Technologies to impact
-                                        millions of users on their daily basis. I am looking to ease
-                                        user's life by providing high availability, capacity, and performance based on offers and demands.
-                                        
-                                    </p>
-                                </Container>
+                                <Header inverted as='h4' textAlign='left' content='My Mission' />
+                                <p>
+                                    Engaged to build the most innovative, inexpensive, and rapid Web Technologies to impact
+                                    millions of users on their daily basis. I am looking to ease
+                                    user's life by providing high availability, capacity, and performance based on offers and demands.
+                                    
+                                </p>
                             </Grid.Column>
                             <Grid.Column width={4}>
                                 <Header inverted as='h4' textAlign='left' content='View Source Code on Github' />
@@ -46,9 +43,9 @@ export default class Footer extends Component{
                                     
                                 </List>
                             </Grid.Column>
-                            <Grid.Column width={8}>
-                                <Header inverted as='h4' content='Stay Connected With Me' />
-                                <p>Follow me through social media. If you appreciate leave me a like !</p>
+                            <Grid.Column width={6}>
+                                <Header inverted as='h4' textAlign={window.matchMedia('(max-width: 1024px)').matches? 'left': 'center'} content='Stay Connected With Me' />
+                                <p style={{textAlign: window.matchMedia('(max-width: 1024px)').matches? 'left':'center'}}>Follow me through social media. If you appreciate leave me a like !</p>
                             </Grid.Column>
                         </Grid>
                         <Divider inverted section />
@@ -64,8 +61,7 @@ export default class Footer extends Component{
                             Privacy Policy
                         </List.Item>
                         </List>
-                    </Container>
-                </Segment>
+                    </div>
             </div>
         )
     }
