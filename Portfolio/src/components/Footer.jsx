@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Grid, Header, List, Divider, Segment, Container } from 'semantic-ui-react'
+import { Grid, Header, List, Divider } from 'semantic-ui-react'
 import FollowAt from "react-social-media-follow";
 
 const links = [
@@ -21,24 +21,20 @@ export default class Footer extends Component{
     render(){
         return(
             <div id={this.state.id}>
-                <Segment vertical style={{padding:'0rem'}}>
-                    <Container className='footer'>
-                        <Grid divided inverted stackable padded>
-                            <Grid.Column></Grid.Column>
+                    <div className='footer'>
+                        <Grid stackable inverted>
                             <Grid.Column width={4}>
-                                <Container textAlign={'left'}>
-                                    <Header inverted as='h4' content='My Mission' />
-                                    <p>
-                                        Engaged to build the most innovative, costless, and rapid Web Technologies to impact
-                                        millions of users on their daily basis. We are looking to ease
-                                        our life by providing high availability, capacity, and scalability.
-                                        
-                                    </p>
-                                </Container>
+                                <Header inverted as='h4' textAlign='left' content='My Mission' />
+                                <p>
+                                    Engaged to build the most innovative and rapid Web Technologies to impact
+                                    millions of users on their daily basis. I am looking to bring
+                                    the user's experience to another level by providing high availability, capacity, and performance.
+                                    
+                                </p>
                             </Grid.Column>
-                            <Grid.Column width={3}>
-                                <Header inverted as='h4' content='Download My Projects' />
-                                <List link inverted>
+                            <Grid.Column width={4}>
+                                <Header inverted as='h4' textAlign='left' content='View Source Code on Github' />
+                                <List link inverted style={{textAlign:'left'}}>
                                     <List.Item as='a' href='https://github.com/mikemaoche/RecipeFinder'>Recipe Finder</List.Item>
                                     <List.Item as='a' href='https://github.com/mikemaoche/ReduxOnBoarding'>Redux OnBoarding</List.Item>
                                     <List.Item as='a' href='https://github.com/mikemaoche/PHPWebsiteEnglishVersion'>Streaming Website</List.Item>
@@ -47,14 +43,11 @@ export default class Footer extends Component{
                                     
                                 </List>
                             </Grid.Column>
-                            
-                           
-                            <Grid.Column width={8}>
-                                <Header inverted as='h4' content='Stay Connected With Me' />
-                                <p>Follow me through social media. If you appreciate leave me a like !</p>
+                            <Grid.Column width={6}>
+                                <Header inverted as='h4' textAlign={window.matchMedia('(max-width: 1024px)').matches? 'left': 'center'} content='Stay Connected With Me' />
+                                <p style={{textAlign: window.matchMedia('(max-width: 1024px)').matches? 'left':'center'}}>Follow me through social media. If you appreciate leave me a like !</p>
                             </Grid.Column>
                         </Grid>
-
                         <Divider inverted section />
                         <FollowAt links = {links} color={'rgba(230,130,220,1)'} hoverColor={'white'}/>
                         <List horizontal inverted divided link size='small'>
@@ -68,8 +61,7 @@ export default class Footer extends Component{
                             Privacy Policy
                         </List.Item>
                         </List>
-                    </Container>
-                </Segment>
+                    </div>
             </div>
         )
     }

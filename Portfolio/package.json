@@ -1,21 +1,21 @@
 {
-  "homepage": "https://github.com/mikemaoche/Portfolio2021",
+  "homepage": "https://mikemaoche.github.io/Portfolio2021.github.io",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "esModuleInterop": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.22",
-    "@types/node": "^14.14.37",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^14.17.3",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
+    "aos": "^2.3.4",
     "emailjs-com": "^2.6.4",
     "infinite-react-carousel": "^1.2.11",
     "jquery": "^3.6.0",
-    "random-words": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -25,14 +25,14 @@
     "react-three-fiber": "^5.3.22",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
-    "three": "^0.127.0",
-    "three-stdlib": "^1.2.2",
-    "typescript": "^4.2.3",
-    "web-vitals": "^1.1.1"
+    "three": "^0.129.0",
+    "three-stdlib": "^1.2.4",
+    "typescript": "^4.3.2",
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -57,6 +57,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.2.0"
   }
 }

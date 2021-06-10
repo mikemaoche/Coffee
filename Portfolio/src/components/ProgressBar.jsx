@@ -11,10 +11,8 @@ export default class ProgressBar extends Component {
       
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ 
-      percent: nextProps.percent
-    })
+  componentDidUpdate(nextProps) {
+    if(nextProps.percent !== this.state.percent) this.setState({ percent: nextProps.percent })
   }
 
 

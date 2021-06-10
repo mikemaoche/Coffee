@@ -1,6 +1,13 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import { Card, Image, Grid, Segment, Item, Header,Reveal } from 'semantic-ui-react'
 import ProgressBar from '../components/ProgressBar'
+import photo from '../images/myphoto.jpg';
+import fr from '../images/fr-flag.png';
+import nz from '../images/nz-flag.png';
+import hk from '../images/hk-flag.png';
+import silverFern from '../images/silver-fern.jpeg';
+
+const self = window
 
 export default class Introduction extends Component{
     constructor(props){
@@ -16,16 +23,16 @@ export default class Introduction extends Component{
                 {language:"React Native",percent:0, max:80}
             ]
         }
-        // this.handleDelete = this.handleDelete.bind(this)
+
         this.animateProgressBar=this.animateProgressBar.bind(this);
     }
 
     componentDidMount(){
-        window.addEventListener('scroll', this.animateProgressBar);
+        self.addEventListener('scroll', this.animateProgressBar);
     }
 
     animateProgressBar(){
-            if (window.scrollY > 1080) {
+            if (self.scrollY > 1080) {
                 var newArray=[]
                 this.state.programingLanguages.forEach((object) => {
                     let {language,percent,max} = object
@@ -38,7 +45,7 @@ export default class Introduction extends Component{
                 this.setState({ programingLanguages:newArray})
             } 
             
-            if(window.scrollY < 1070){
+            if(self.scrollY < 1070){
                 var array=[
                     {language:"ReactJS", percent:0, max:95},
                     {language:"SQL", percent:0, max:90},
@@ -50,55 +57,49 @@ export default class Introduction extends Component{
             }
     }
 
-    // handleDelete(e){
-    //     var shallowCopy= this.state.feedingList
-    //     var index = shallowCopy.indexOf(e.target.value)
-
-    //     if (index !== -1) {
-    //         shallowCopy.splice(index, 1);
-    //         this.setState({
-    //             feedingList:shallowCopy
-    //         })
-    //     }
-    // }
-
     render(){
         const { programingLanguages } = this.state;
         
         return(
             <div id={this.state.id}>
                 <Segment className='personalContainer'>
-                    <Segment style={{width:"80%", margin:'10rem auto',zIndex:3}}>
-                        <Header as="h1">About Me</Header>
-                        <Grid>
-                            <Grid.Column width={4}>
+                    <Segment style={{width:"90%", margin:'10rem auto',zIndex:3}}>
+                        <Header data-aos='fade-up' as="h1">Profile</Header>
+                        <Grid stackable>
+                            <Grid.Column data-aos='fade-up' width={4}>
                                 <Card fluid color='pink'>
                                     <Reveal animated='small fade'>
                                         <Reveal.Content visible>
-                                            <Image src='../silver-fern.jpeg' />
+                                            <Image src={silverFern}/>
                                         </Reveal.Content>
                                         <Reveal.Content hidden>
-                                            <Image  src='../myphoto.jpg' ui wrapped={false}/>
+                                            <Image src={photo} ui wrapped={false} />
                                         </Reveal.Content>
                                     </Reveal>
                                     <Card.Content>
                                     <Card.Header>Mike Mao Che</Card.Header>
                                     <Card.Meta>
-                                        <span className='date'>Intern Software Developer</span>
+                                        <span className='date'>Software Engineer</span>
                                     </Card.Meta>
                                     <Card.Description>
-                                        Mike is a graduated student from Tasman.
+                                        Graduated student from Tasman.
                                     </Card.Description>
                                     </Card.Content>
                                 </Card>
                             </Grid.Column>
                             <Grid.Column  width={8} style={{textAlign:'justify', backgroundColor:'rgba(255,255,255,1)', margin:'1rem', borderRadius:'4px', height: 'fit-content'}}>
-                                <Header as='h1'>Introduction</Header>
-                                <p> From a small island called 'Tahiti', I am driven and passionate about software development. Also, love to make it people feel comfortable.
-                                    Enjoying social activities and interactions. 
+                                <Header data-aos='fade-up' as='h1'>About Me</Header>
+                                <p data-aos='fade-up'> Nice to meet you! My name is Mike and I am from an exotic island called Tahiti. Since I was a child, I was exposed to different
+                                    technology. Especially, gaming consoles.
+                                    Later, during my time in high school, I met an incredible friend that was very passionate about programming.
                                 </p>
-                                <Header as='h2'>Programming Languages</Header>
-                                <Header as='h5'>Confidence Level</Header>
+                                <p data-aos='fade-up'>
+                                    I will always remember that day when
+                                    he made me discovered the power of programming by creating executables on PC and running games in a graphing calculator. It was fun and awesome. 
+                                    So, from it, I decided this is the path that I have to take. 
+                                </p>
+                                <Header data-aos='fade-up' as='h2'>Programming Languages</Header>
+                                <Header data-aos='fade-up' as='h5'>Confidence Level</Header>
                                 { programingLanguages.map((object,index) => {
                                     const {language,percent} = object
                                     return (                    
@@ -110,20 +111,20 @@ export default class Introduction extends Component{
                                 })}
                             </Grid.Column>
                             <Grid.Column width={3} style={{textAlign:'justify', backgroundColor:'rgba(255,255,255,1)', margin:'1rem', borderRadius:'4px', height: 'fit-content'}}>
-                                <Header as='h3'>Spoken Languages</Header>
-                                <Item.Group divided>
+                                <Header data-aos='fade-up' as='h3'>Spoken Languages</Header>
+                                <Item.Group data-aos='fade-up' divided>
                                     <Item>
-                                        <Item.Image className='flag' size='tiny' src='../fr-flag.png' />
+                                        <Item.Image className='flag' size='tiny' src={fr} />
                                         <Item.Content verticalAlign='middle'>French</Item.Content>
                                     </Item>
 
                                     <Item>
-                                        <Item.Image className='flag' size='tiny' src='../nz-flag.png' />
+                                        <Item.Image className='flag' size='tiny' src={nz} />
                                         <Item.Content verticalAlign='middle'>English</Item.Content>
                                     </Item>
 
                                     <Item>
-                                        <Item.Image className='flag' size='tiny' src='../hk-flag.png' />
+                                        <Item.Image className='flag' size='tiny' src={hk} />
                                         <Item.Content content='Cantonese' verticalAlign='middle' />
                                     </Item>
                                 </Item.Group>

@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
 import { Menu,Image, Button } from 'semantic-ui-react'
+import logo from '../images/logo.png';
 
-
+const styles ={
+  hireMe:{
+    position:'absolute', zIndex:4, top:'43%',left:'43.5%', width:'200px'
+  },
+  logo:{
+    position: 'absolute', top:0, left:'40%', zIndex:4
+  },
+  buttonFooter:{
+    position:'fixed', zIndex:10, bottom:'5%', right:'2%'
+  }
+}
 
 export default class HomeMenu extends Component {
   constructor(props){
@@ -10,47 +21,36 @@ export default class HomeMenu extends Component {
     this.state = {
       id:props.id,
       activeItem:props.pageName,
-      menu:false
+      menu:false,
+      prevScrollY: window.pageYOffset
     }
     this.handleItemClick=this.handleItemClick.bind(this)
     this.changeBgMenu=this.changeBgMenu.bind(this)
   }
 
   handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: name },this.props.handleIndex(name)) 
+    this.setState({ activeItem: name},this.props.handleIndex(name)) 
   }
 
   changeBgMenu(){
-    var menu=false;
-    
-    if(window.scrollY >=55){
-      menu=true
-    } else{
-      menu=false
-    }
-    this.setState({
-      menu
-    })
-    
+    let currScrollY = window.pageYOffset
+    if(this.state.prevScrollY >= currScrollY) document.getElementsByClassName('menuHeader')[0].style.top = '0px'
+    else document.getElementsByClassName('menuHeader')[0].style.top = '-50px'
+    this.setState({prevScrollY: currScrollY})
   }
   
-  
-
   render() {
     window.addEventListener('scroll',this.changeBgMenu);
     const { activeItem } = this.state
-
+    
     return (
       <div id={this.state.id}>
-        <Button name='Home' className="logo" style={{borderRadius:'none', backgroundColor:'rgba(0,0,0,0)'}} onClick={this.handleItemClick} as="a">
-          <Image alt='logo' src='../logo.png' />
-        </Button>
-        <Menu className={this.state.menu ? 'menuHeaderVisible':'menuHeader'} inverted >
+        <Menu className='menuHeader' inverted pointing secondary stackable>
           <Menu.Item
             name='Home'
             active={activeItem === 'Home'}
             onClick={this.handleItemClick}
-            
+            position='left'
           >
             Home
           </Menu.Item>
@@ -60,7 +60,7 @@ export default class HomeMenu extends Component {
             active={activeItem === 'Introduction'}
             onClick={this.handleItemClick}
           >
-            Introduction
+            My Story
           </Menu.Item>
 
           <Menu.Item
@@ -68,33 +68,28 @@ export default class HomeMenu extends Component {
             active={activeItem === 'Projects'}
             onClick={this.handleItemClick}
           >
-            Projects
+            View My Projects
           </Menu.Item>
-          {/* <Menu.Item
-            name='Testimonials'
-            active={activeItem === 'Testimonials'}
-            onClick={this.handleItemClick}
-          >
-            Testimonials
-          </Menu.Item> */}
           <Menu.Item
-            name='Services'
-            active={activeItem === 'Services'}
+            name='Values'
+            active={activeItem === 'Values'}
             onClick={this.handleItemClick}
           >
-            Services
+            My Values
           </Menu.Item>
           <Menu.Item
             name='Contact'
             active={activeItem === 'Contact'}
             onClick={this.handleItemClick}
+            position='right'
           >
             Contact Me
           </Menu.Item>
         </Menu>
-        <Button name='Contact' onClick={this.handleItemClick} className='hireMe' style={{position:'absolute', zIndex:10, top:'42%',left:'42%', width:'200px'}} color="pink">Hire Me</Button>
-        <Button className="buttonFooter" name='Footer' onClick={this.handleItemClick} style={{position:'absolute', zIndex:10, bottom:'5%', right:'2%'}}
+        <Button name='Contact' onClick={this.handleItemClick} className='hireMe' style={styles.hireMe} color="purple">Hire Me</Button>
+        <Button name='Footer'  className="buttonFooter" onClick={this.handleItemClick} style={styles.buttonFooter}
           circular icon='arrow alternate circle down' size="big" color="purple"/>
+          <Image style={styles.logo} alt='logo' src={logo} size='medium'/>
       </div>
     )
   }

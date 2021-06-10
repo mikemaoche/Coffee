@@ -76,9 +76,9 @@ class Contact extends Component {
         
         return (
             <div id={this.state.id}>
-                <Segment style={{ backgroundColor:'rgba(45, 52, 54,1.0)'}}>
+                <Segment style={{ backgroundColor:'#1A1A1D'}}>
                     <Segment style={{width:"80%", margin:'10rem auto', zIndex:3}}>
-                        <Grid>
+                        <Grid stackable>
                             <Grid.Column width={4}>
                                 <Form onSubmit={this.handleSubmit} ref={this.state.btnSubmit} >
                                     <Form.Field style={{textAlign:'left'}} >
