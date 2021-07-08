@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Menu,Image, Button } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Button, Image, Menu } from 'semantic-ui-react';
 import logo from '../images/logo.png';
 
 const styles ={
@@ -86,7 +86,7 @@ export default class HomeMenu extends Component {
             Contact Me
           </Menu.Item>
         </Menu>
-        <Button name='Contact' onClick={this.handleItemClick} className='hireMe' style={styles.hireMe} color="purple">Hire Me</Button>
+        <Button name='Contact' onClick={this.handleItemClick} className='hireMe' style={styles.hireMe} color="purple">Contact Me</Button>
         <Button name='Footer'  className="buttonFooter" onClick={this.handleItemClick} style={styles.buttonFooter}
           circular icon='arrow alternate circle down' size="big" color="purple"/>
           <Image style={styles.logo} alt='logo' src={logo} size='medium'/>

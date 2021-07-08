@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { Card, Image, Grid, Segment, Item, Header,Reveal } from 'semantic-ui-react'
-import ProgressBar from '../components/ProgressBar'
-import photo from '../images/myphoto.jpg';
+import React, { Component } from 'react';
+import { Card, Grid, Header, Image, Item, Reveal, Segment } from 'semantic-ui-react';
+import ProgressBar from '../components/ProgressBar';
 import fr from '../images/fr-flag.png';
-import nz from '../images/nz-flag.png';
 import hk from '../images/hk-flag.png';
+import photo from '../images/myphoto.jpg';
+import nz from '../images/nz-flag.png';
 import silverFern from '../images/silver-fern.jpeg';
 
 const self = window

@@ -1,29 +1,41 @@
 import React, { Component } from 'react';
-import { Segment,Header, Grid, Container } from 'semantic-ui-react';
+import { Container, Grid, Header, Segment, Dimmer,  Image} from 'semantic-ui-react';
 import SliderCarousel from '../components/SliderCarousel';
 import Video from '../components/Video';
-import botVideo from '../videos/bot.mp4'
-import christmasVideo from '../videos/Christmas.mkv'
-import streamingWebsite from '../videos/Anime.mkv'
-import img1 from "../images/projects/img1.jpg";
-import img2 from "../images/projects/img2.jpg";
-import img3 from "../images/projects/img3.jpg";
-import img4 from "../images/projects/img4.jpg";
-import img5 from "../images/projects/img5.jpg";
-import img6 from "../images/projects/img6.jpg";
-import img7 from "../images/projects/img7.jpg";
+import nintendoswitch from "../images/projects/nintendo-switch.jpg";
+import whiskey from "../images/projects/glass-of-whiskey.jpg";
+import bullet from "../images/projects/bullet.jpg";
+import dragonball from "../images/projects/dragon-ball.jpg";
+import led from "../images/projects/led.jpg";
+import dog from "../images/projects/lego-dog.jpg";
+import recipe1 from "../images/projects/recipe-finder.jpg";
+import recipe2 from "../images/projects/recipe-finder2.jpg";
+import recipe3 from "../images/projects/recipe-finder3.jpg";
+
+import streamingWebsite from '../videos/Anime.mkv';
+import botVideo from '../videos/bot.mp4';
+import christmasVideo from '../videos/Christmas.mkv';
 
 const images=[
-    img1,img2,img3,img4,img5,img6,img7
+    nintendoswitch, whiskey, bullet, dragonball, led, dog,
+    recipe1,recipe2,recipe3
 ]
 
-class Projects extends Component {
+class Projects extends Component {ß
     constructor(props){
         super(props)
         this.state={
-            id:props.id
+            id:props.id,
+            active:false,
+            src:null
         }
     }
+
+
+    handleOpen = (src) => this.setState({ active: true, src })
+    handleClose = () => this.setState({ active: false })
+
+
     render() {
         return (
             <div id={this.state.id}>
@@ -41,9 +53,8 @@ class Projects extends Component {
                                     <Container className="projectContainer" style={{width:'fit-content'}} textAlign="left" text>
                                             <Header data-aos='fade-right' as='h2'>Automated Appartment Seeker</Header>
                                             <p data-aos='fade-left'>
-                                                It's my first bot creation where the purpose is to seek rental apartments at their lowest prices. 
-                                                With a combination of JavaScript and NodeJS for the Web and Pupeeter for machine learning. The bot
-                                                is programmed with predefined values although it can be improved in the future.
+                                                The purpose is to automate the process of seeking rental apartments at their lowest prices. 
+                                                Technologies used: JavaScript, NodeJS, and Pupeeter for machine learning.
                                             </p>
                                         </Container>
                                 </Grid.Column>
@@ -56,10 +67,9 @@ class Projects extends Component {
                                     <Container className="projectContainer" style={{width:'fit-content'}} textAlign="right" text>
                                             <Header data-aos='fade-right' textAlign='right' as='h2'>Christmas Website</Header>
                                             <p data-aos='fade-left'>
-                                                It's a cultural Web project that integrates Korean and Japanese cultures. The technology to build this website is based on
-                                                JavaScript and JQUERY for the animation, and Bootstrap for the CSS style. In this project,
-                                                I have learned how to use embedded videos and refresh my front-end knowledge. You would be immersed in a winter
-                                                and cherry blossom season.
+                                                I built this website for my friend to let him keep and visualize his personal photos using a carousel. In this project,
+                                                I have learned how to use embedded videos and refresh my front-end knowledge.
+                                                Technologies used: HTML, CSS, JavaScript, jQuery, and Bootstrap. 
                                             </p>
                                         </Container>
                                 </Grid.Column>
@@ -81,23 +91,40 @@ class Projects extends Component {
                                     <Container className="projectContainer" style={{width:'fit-content'}} textAlign="left" text>
                                             <Header as='h2' data-aos='fade-right'>Streaming Website</Header>
                                             <p data-aos='fade-left'>
-                                            This is one of the most interesting projects that I was working on at the CEGEP of Vieux Montreal.
+                                            This is one of the most interesting projects that I was working on at the Cegep of Vieux Montreal.
                                             Instead of doing an internship as the school was about to. They decided to let students work on a free project.
-                                            It could be Web, Desktop, or mobile application. In my case, I went with an operational Website using PHP,
-                                            DAO Architecture, MySQL database, and homemade CSS. 
+                                            It could be Website, Desktop application, or mobile application. 
                                             
-                                            The Website contains two UI. One for the users and the
-                                            other one for the admin. The passwords are secured by using HASH and SALT for encryption. We can upload,
-                                            delete, comment, and review the video. Users can request a video that they want to see on streaming to the admin.
-                                            A panel will indicate the queue. The admin can post announcements.
+                                            It was my dream to own a Streaming Website where I could upload my content.
+                                            </p>
+                                            <p data-aos='fade-left'>
+                                            The passwords are secured by using HASH and SALT for encryption. Technologies used: XAMP Server, HTML, PHP, DAO, MySQL, and homemade CSS.
                                             </p>
                                         </Container>
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
-                        <SliderCarousel images={images} />
+                        <Grid columns={1} divided stackable>
+                            <Grid.Column>
+                                <Container className="projectContainer" style={{width:'fit-content'}} text>
+                                    <Header data-aos='fade-right' as='h1'>Latest News</Header>
+                                    <p data-aos='fade-left'>
+                                        Creating Blender Projects...
+                                        I currently work on mobile project using React Native, NativeBase, Back4App and Figma.
+                                    </p>
+                                </Container>
+                                <SliderCarousel handleOpen={this.handleOpen} images={images} />
+                            </Grid.Column>
+                        </Grid>
                     </Segment>
                 </Segment>
+                {this.state.active ?   
+                    <Dimmer active={this.state.active} onClickOutside={this.handleClose} page>
+                        <Image src={this.state.src} size='huge' />
+                    </Dimmer>
+                    : 
+                    <div/>
+                }
             </div>
         );
     }

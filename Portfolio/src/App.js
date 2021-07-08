@@ -1,12 +1,12 @@
-import './App.css'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import $ from 'jquery'; 
-import React, { Component, lazy, Suspense} from 'react'
-import {Container} from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import $ from 'jquery';
+import React, { Component, lazy, Suspense } from 'react';
+import 'semantic-ui-css/semantic.min.css';
+import { Container } from 'semantic-ui-react';
+import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Spinner from './components/Spinner';
 const Introduction = lazy(() => import( './pages/Introduction'));
@@ -24,7 +24,7 @@ export default class App extends Component{
       pageName:'Home',
       isLoading:true,
       wordsToDescribeMe:[
-        'moral and ethics', 'teamwork','endless possibilities'
+        'HTMl5/CSS3/JS/jQuery','ReactJS/Semantic UI/NodeJS','AOS/EmailJS/FiberJS/GoogleMap API',
       ],
       word:"",
       isScrolling:false

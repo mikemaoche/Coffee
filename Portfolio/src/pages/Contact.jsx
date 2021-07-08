@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Segment, Grid, Form, Button, TextArea, Header, List, Container} from 'semantic-ui-react'
 import emailjs from 'emailjs-com';
+import React, { Component } from 'react';
+import { Button, Container, Form, Grid, Header, List, Segment, TextArea } from 'semantic-ui-react';
 
 const SERVICE_ID='service_cpg043h'
 const TEMPLATE_ID='template_y28f1pn'

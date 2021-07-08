@@ -24,13 +24,8 @@ export default class Footer extends Component{
                     <div className='footer'>
                         <Grid stackable inverted>
                             <Grid.Column width={4}>
-                                <Header inverted as='h4' textAlign='left' content='My Mission' />
-                                <p>
-                                    Engaged to build the most innovative and rapid Web Technologies to impact
-                                    millions of users on their daily basis. I am looking to bring
-                                    the user's experience to another level by providing high availability, capacity, and performance.
-                                    
-                                </p>
+                                <Header inverted as='h4' textAlign='left' content='Interest in' />
+                                <p>Design & 3D Modelling</p>
                             </Grid.Column>
                             <Grid.Column width={4}>
                                 <Header inverted as='h4' textAlign='left' content='View Source Code on Github' />
