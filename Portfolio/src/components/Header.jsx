@@ -60,22 +60,28 @@ export default class HomeMenu extends Component {
             active={activeItem === 'Introduction'}
             onClick={this.handleItemClick}
           >
-            My Story
+            About Me
           </Menu.Item>
-
           <Menu.Item
             name='Projects'
             active={activeItem === 'Projects'}
             onClick={this.handleItemClick}
           >
-            View My Projects
+            View Projects
+          </Menu.Item>
+          <Menu.Item
+            name='Testimonials'
+            active={activeItem === 'Testimonials'}
+            onClick={this.handleItemClick}
+          >
+            Testimonials
           </Menu.Item>
           <Menu.Item
             name='Values'
             active={activeItem === 'Values'}
             onClick={this.handleItemClick}
           >
-            My Values
+            Personal Values
           </Menu.Item>
           <Menu.Item
             name='Contact'

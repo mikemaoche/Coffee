@@ -223,6 +223,47 @@ body {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+.cardHighlight:before{
+  border: 3px solid transparent;
+}
+
+.cardHighlight:hover{
+  animation:hightlight 3s ease-in-out forwards;
+}
+
+@keyframes hightlight{
+  0% { 
+    border-top: 3px solid #fc50ff ;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+  }
+  25% { 
+    border-top: 3px solid transparent ;
+    border-right: 3px solid #fc50ff;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+  }
+  50% { 
+    border-top: 3px solid transparent ;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid #fc50ff;
+    border-left: 3px solid transparent;
+  }
+  75% { 
+    border-top: 3px solid transparent ;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #fc50ff;
+  }
+  100% { 
+    border-top: 3px solid #fc50ff;
+    border-right: 3px solid #fc50ff;
+    border-bottom: 3px solid #fc50ff;
+    border-left: 3px solid #fc50ff;
+  }
+}
+
 .hireMe:hover{
   transition-duration: 0.3s !important;
   background:rgb(114, 30, 107) !important;

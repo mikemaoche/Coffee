@@ -79,10 +79,10 @@ export default class Introduction extends Component{
                                     <Card.Content>
                                     <Card.Header>Mike Mao Che</Card.Header>
                                     <Card.Meta>
-                                        <span className='date'>Software Engineer</span>
+                                        <span className='date'>Software Developer</span>
                                     </Card.Meta>
                                     <Card.Description>
-                                        Graduated student from Tasman.
+                                        I am specialist in software development.
                                     </Card.Description>
                                     </Card.Content>
                                 </Card>

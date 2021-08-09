@@ -12,6 +12,7 @@ import Spinner from './components/Spinner';
 const Introduction = lazy(() => import( './pages/Introduction'));
 const Contact  = lazy(() => import('./pages/Contact'));
 const Projects = lazy(() => import( './pages/Projects'));
+const Testimonials = lazy(() => import( './pages/Testimonials'));
 const Values = lazy(() => import('./pages/Values'));
 // const Planet = lazy(() => import('./components/Planet'))
 
@@ -88,6 +89,7 @@ export default class App extends Component{
               {/* <Planet isScrolling={this.state.isScrolling} /> */}
               <Introduction id="Introduction"/>
               <Projects id="Projects" />
+              <Testimonials id="Testimonials" />
               <Values id="Values"/>
               <Contact id="Contact"/>
           </Container>

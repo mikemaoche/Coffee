@@ -11,13 +11,14 @@ import dog from "../images/projects/lego-dog.jpg";
 import recipe1 from "../images/projects/recipe-finder.jpg";
 import recipe2 from "../images/projects/recipe-finder2.jpg";
 import recipe3 from "../images/projects/recipe-finder3.jpg";
+import piano from "../images/projects/piano.jpg"
 
 import streamingWebsite from '../videos/Anime.mkv';
 import botVideo from '../videos/bot.mp4';
 import christmasVideo from '../videos/Christmas.mkv';
 
 const images=[
-    nintendoswitch, whiskey, bullet, dragonball, led, dog,
+    piano, nintendoswitch, whiskey, bullet, dragonball, led, dog,
     recipe1,recipe2,recipe3
 ]
 
