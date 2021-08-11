@@ -28,12 +28,14 @@ export default class HomeMenu extends Component {
     this.changeBgMenu=this.changeBgMenu.bind(this)
   }
 
+
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name},this.props.handleIndex(name)) 
   }
 
   changeBgMenu(){
     let currScrollY = window.pageYOffset
+    
     if(this.state.prevScrollY >= currScrollY) document.getElementsByClassName('menuHeader')[0].style.top = '0px'
     else document.getElementsByClassName('menuHeader')[0].style.top = '-50px'
     this.setState({prevScrollY: currScrollY})

@@ -36,7 +36,7 @@ class Values extends Component {
                                         <Header data-aos='fade-down' as='h2'>Courage</Header>
                                         <p data-aos='fade-down'>
                                             It takes courage to fail again and again to move forward. Being brave to
-                                            dare your ideas, open yourself to people, and accept incoming difficulties.
+                                            dare your ideas, open yourself to people, and accept upcoming difficulties.
                                         </p>
                                     </Container>
                             </Grid.Column>

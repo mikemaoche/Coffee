@@ -8,7 +8,7 @@ const Testimonial = (props) =>
         <Card.Content textAlign='left' header={<Icon name='left quote' />} />
         <Card.Content description={props.description} />
         <Card.Content extra>
-            <Image src={props.src} size='tiny' circular />
+            <Image style={{width:100,height:100,objectFit:'cover'}} circular src={props.src}  />
             <Header>{props.name}</Header>
             <Header as='h4'><a href={props.linkedin}>View LinkedIn Profile</a></Header>
             <Divider></Divider>

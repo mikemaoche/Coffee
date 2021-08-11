@@ -32,6 +32,16 @@ class Projects extends Component {ß
         }
     }
 
+    // componentDidUpdate(){
+    //     var botVideo = document.getElementById('botVideo')
+    //     var christmasVideo = document.getElementById('christmasVideo')
+    //     var streamingVideo = document.getElementById('streamingVideo')
+    //     console.dir(botVideo);
+        
+    //     // if(!botVideo.webkitDisplayingFullscreen) break;
+    //     // if(!christmasVideo.webkitDisplayingFullscreen) break;
+    //     // if(!streamingVideo.webkitDisplayingFullscreen) break;
+    // }
 
     handleOpen = (src) => this.setState({ active: true, src })
     handleClose = () => this.setState({ active: false })
@@ -46,13 +56,13 @@ class Projects extends Component {ß
                         <Grid columns={2} divided stackable>
                             <Grid.Row stretched>
                                 <Grid.Column data-aos='fade-right' width={8}>
-                                    <Video src={botVideo} type={'video/mp4'}  controls='controls'
+                                    <Video id={'botVideo'} src={botVideo} type={'video/mp4'}  controls='controls'
                                         autoPlay={false} loop={true} muted={true} 
                                         style={{ width:'relative', borderRadius:'4px', boxShadow: '0px 0px 15px 3px #FFA6EA' }}/>
                                 </Grid.Column>
                                 <Grid.Column width={6}>
                                     <Container className="projectContainer" style={{width:'fit-content'}} textAlign="left" text>
-                                            <Header data-aos='fade-right' as='h2'>Automated Appartment Seeker</Header>
+                                            <Header data-aos='fade-right' as='h2'>Automated Apartment Seeker</Header>
                                             <p data-aos='fade-left'>
                                                 The purpose is to automate the process of seeking rental apartments at their lowest prices. 
                                                 Technologies used: JavaScript, NodeJS, and Pupeeter for machine learning.
@@ -75,7 +85,7 @@ class Projects extends Component {ß
                                         </Container>
                                 </Grid.Column>
                                 <Grid.Column data-aos='fade-left' width={8}>
-                                    <Video src={christmasVideo} type={'video/mp4'}  controls='controls'
+                                    <Video id={'christmasVideo'} src={christmasVideo} type={'video/mp4'}  controls='controls'
                                             autoPlay={false} loop={true} muted={true} 
                                             style={{ width:'relative', borderRadius:'4px', boxShadow: '0px 0px 15px 3px #FFA6EA' }}/>
                                 </Grid.Column>
@@ -84,7 +94,7 @@ class Projects extends Component {ß
                         <Grid columns={2} divided stackable>
                             <Grid.Row stretched>
                                 <Grid.Column data-aos='fade-right' width={8}>
-                                    <Video src={streamingWebsite} type={'video/mp4'}  controls='controls'
+                                    <Video id={'streamingVideo'} src={streamingWebsite} type={'video/mp4'}  controls='controls'
                                             autoPlay={false} loop={true} muted={true} 
                                             style={{ width:'relative', borderRadius:'4px', boxShadow: '0px 0px 15px 3px #FFA6EA' }}/>
                                 </Grid.Column>
@@ -93,7 +103,7 @@ class Projects extends Component {ß
                                             <Header as='h2' data-aos='fade-right'>Streaming Website</Header>
                                             <p data-aos='fade-left'>
                                             This is one of the most interesting projects that I was working on at the Cegep of Vieux Montreal.
-                                            Instead of doing an internship as the school was about to. They decided to let students work on a free project.
+                                            Instead of an internship, they decided to let the students work on a free project.
                                             It could be Website, Desktop application, or mobile application. 
                                             
                                             It was my dream to own a Streaming Website where I could upload my content.

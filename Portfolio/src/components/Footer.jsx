@@ -26,6 +26,7 @@ export default class Footer extends Component{
                             <Grid.Column width={4}>
                                 <Header inverted as='h4' textAlign='left' content='Interest in' />
                                 <p>Design & 3D Modelling</p>
+                                <p>Latte Art</p>
                             </Grid.Column>
                             <Grid.Column width={4}>
                                 <Header inverted as='h4' textAlign='left' content='View Source Code on Github' />
